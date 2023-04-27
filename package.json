@@ -1,6 +1,12 @@
 {
-  "private": true,
-  "scripts": {
-    "landing": "pnpm --filter @voulr/landing -- "
-  }
+	"private": true,
+	"scripts": {
+		"landing": "pnpm --filter @voulr/landing -- ",
+		"components": "pnpm --filter @voulr/components -- "
+	},
+	"devDependencies": {
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"svelte": "^3.54.0"
+	}
 }

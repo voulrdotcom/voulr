@@ -1,5 +1,4 @@
-# / 
-.DS_Store
+# / .DS_Store
 node_modules
 /build
 /.svelte-kit
@@ -36,3 +35,4 @@ packages/*/!.env.example
 packages/*/pnpm-lock.yaml
 packages/*/package-lock.json
 packages/*/yarn.lock
+
