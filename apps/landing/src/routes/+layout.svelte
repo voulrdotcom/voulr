@@ -7,5 +7,7 @@
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
-<Navbar />
-<slot />
+<div class="bg-black">
+	<Navbar />
+	<slot />
+</div>

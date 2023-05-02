@@ -2,7 +2,8 @@
 	"private": true,
 	"scripts": {
 		"landing": "pnpm --filter @voulr/landing -- ",
-		"components": "pnpm --filter @voulr/components -- "
+		"components": "pnpm --filter @voulr/components -- ",
+		"assets": "pnpm --filter @voulr/assets -- "
 	},
 	"devDependencies": {
 		"prettier": "^2.8.0",
