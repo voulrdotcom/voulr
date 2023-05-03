@@ -8,8 +8,6 @@
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
-<div class="bg-black">
-	<Navbar />
-	<slot />
-	<Footer />
-</div>
+<Navbar />
+<slot />
+<Footer />

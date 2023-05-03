@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { TwitterLogo, GithubLogo } from '@voulr/ui';
 	import voulrText from '@voulr/assets/svgs/voulr-text.svg';
 </script>
 
@@ -11,14 +10,6 @@
 				<p class="text-sm text-neutral-500">
 					Copyright &copy; {new Date().getFullYear()} Voulr Inc.
 				</p>
-				<div class="flex items-center gap-1.5">
-					<a href="https://twitter.com/voulrdotcom" rel="noreferrer" target="_blank">
-						<TwitterLogo class="h-6 w-6 fill-neutral-500 hover:fill-neutral-300" />
-					</a>
-					<a href="https://github.com/vloe/voulr" rel="noreferrer" target="_blank">
-						<GithubLogo class="h-6 w-6 fill-neutral-500 hover:fill-neutral-300" />
-					</a>
-				</div>
 			</div>
 			<div class="col-span-1 flex flex-col gap-3">
 				<h2 class="pb-2 text-sm uppercase tracking-widest text-neutral-500">Products</h2>
