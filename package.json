@@ -6,8 +6,9 @@
 		"assets": "pnpm --filter @voulr/assets -- "
 	},
 	"devDependencies": {
-		"prettier": "^2.8.0",
+		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.2.8",
 		"svelte": "^3.54.0"
 	}
 }

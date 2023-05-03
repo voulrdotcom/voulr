@@ -3,15 +3,15 @@
 </script>
 
 <div class="container mx-auto px-6">
-	<div class="flex items-center justify-between h-[75px] bg-black w-full">
+	<div class="flex h-[75px] w-full items-center justify-between bg-black">
 		<a href="/">
 			<img src={voulrText} alt="voulr" class="w-16" />
 		</a>
-		<div class="hidden sm:flex flex-row gap-6">
-			<a href="/" class="text-white text-sm hover:brightness-75 transition-all duration-300">
+		<div class="hidden flex-row gap-6 lg:flex">
+			<a href="/" class="text-sm text-white transition-all duration-300 hover:brightness-75">
 				Contact Sales
 			</a>
-			<a href="/login" class="text-white text-sm hover:brightness-75 transition-all duration-300">
+			<a href="/login" class="text-sm text-white transition-all duration-300 hover:brightness-75">
 				Log In
 			</a>
 		</div>

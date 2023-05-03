@@ -6,7 +6,8 @@ module.exports = {
     bracketSameLine: false,
     semi: true,
     quoteProps: 'consistent',
-    plugins: ['prettier-plugin-svelte'],
+    plugins: ['prettier-plugin-svelte', 'prettier-plugin-tailwindcss'],
     pluginSearchDirs: ['.'],
-    overrides: [{ files: '*.svelte', options: { parser: 'svelte' } }]
+    overrides: [{ files: '*.svelte', options: { parser: 'svelte' } }],
+    tailwindConfig: './packages/ui/tailwind.config.cjs'
 };
