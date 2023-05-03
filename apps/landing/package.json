@@ -28,6 +28,7 @@
 		"@voulr/assets": "workspace:^1.0.0",
 		"@voulr/config": "workspace:^1.0.0",
 		"@voulr/ui": "workspace:^0.0.1",
+		"@yushijinhun/three-minifier-rollup": "^0.4.0",
 		"svelte-sequential-preprocessor": "^1.0.0",
 		"three": "^0.152.2"
 	}
