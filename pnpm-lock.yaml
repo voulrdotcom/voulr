@@ -18,8 +18,8 @@ importers:
       '@sveltejs/kit': ^1.5.0
       '@vercel/analytics': ^1.0.0
       '@voulr/assets': workspace:^1.0.0
-      '@voulr/components': workspace:^0.0.1
       '@voulr/config': workspace:^1.0.0
+      '@voulr/ui': workspace:^0.0.1
       svelte: ^3.54.0
       svelte-check: ^3.0.1
       tslib: ^2.4.1
@@ -27,8 +27,8 @@ importers:
     dependencies:
       '@vercel/analytics': 1.0.0
       '@voulr/assets': link:../../packages/assets
-      '@voulr/components': link:../../packages/components
       '@voulr/config': link:../../packages/config
+      '@voulr/ui': link:../../packages/ui
     devDependencies:
       '@sveltejs/adapter-auto': 2.0.1_@sveltejs+kit@1.15.9
       '@sveltejs/kit': 1.15.9_svelte@3.58.0+vite@4.3.3
@@ -36,6 +36,9 @@ importers:
       svelte-check: 3.2.0_svelte@3.58.0
       tslib: 2.5.0
       vite: 4.3.3
+
+  packages/assets:
+    specifiers: {}
 
   packages/components:
     specifiers:
@@ -82,6 +85,25 @@ importers:
       eslint: 8.39.0
       eslint-config-prettier: 8.8.0_eslint@8.39.0
       eslint-plugin-svelte: 2.27.0_eslint@8.39.0
+      typescript: 5.0.4
+
+  packages/ui:
+    specifiers:
+      '@voulr/config': workspace:^1.0.0
+      autoprefixer: ^10.4.14
+      postcss: ^8.4.23
+      svelte: ^3.54.0
+      tailwindcss: ^3.3.2
+      tslib: ^2.4.1
+      typescript: ^5.0.0
+    dependencies:
+      '@voulr/config': link:../config
+      autoprefixer: 10.4.14_postcss@8.4.23
+      postcss: 8.4.23
+      tailwindcss: 3.3.2
+    devDependencies:
+      svelte: 3.58.0
+      tslib: 2.5.0
       typescript: 5.0.4
 
 packages:

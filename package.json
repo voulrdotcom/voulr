@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"landing": "pnpm --filter @voulr/landing -- ",
-		"components": "pnpm --filter @voulr/components -- ",
+		"ui": "pnpm --filter @voulr/ui -- ",
 		"assets": "pnpm --filter @voulr/assets -- "
 	},
 	"devDependencies": {

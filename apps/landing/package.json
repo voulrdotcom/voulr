@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@vercel/analytics": "^1.0.0",
 		"@voulr/assets": "workspace:^1.0.0",
-		"@voulr/components": "workspace:^0.0.1",
-		"@voulr/config": "workspace:^1.0.0"
+		"@voulr/config": "workspace:^1.0.0",
+		"@voulr/ui": "workspace:^0.0.1"
 	}
 }
