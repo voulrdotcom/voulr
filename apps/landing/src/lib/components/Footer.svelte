@@ -1,12 +1,12 @@
 <script lang="ts">
-	import voulrText from '@voulr/assets/svgs/voulr-text.svg';
+	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 </script>
 
 <div class="border-t border-t-neutral-700">
 	<div class="container mx-auto px-6 py-12 md:py-20">
 		<footer class="grid grid-cols-2 gap-9 lg:grid-cols-6">
 			<div class="col-span-2 flex flex-col gap-3">
-				<img src={voulrText} alt="voulr" class="w-16" />
+				<img src={voulrWhiteLockup} alt="voulr" class="w-24" />
 				<p class="text-sm text-neutral-500">
 					Copyright &copy; {new Date().getFullYear()} Voulr Inc.
 				</p>

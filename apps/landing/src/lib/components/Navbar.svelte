@@ -1,6 +1,5 @@
 <script lang="ts">
-	import voulrText from '@voulr/assets/svgs/voulr-text.svg';
-
+	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	// State
 	let y: number;
 </script>
@@ -14,7 +13,7 @@
 	<div class="container mx-auto px-6">
 		<nav class="flex h-[75px] w-full items-center justify-between">
 			<a href="/">
-				<img src={voulrText} alt="voulr" class="w-16" />
+				<img src={voulrWhiteLockup} alt="voulr" class="w-24" />
 			</a>
 			<div class="hidden items-center gap-9 lg:flex">
 				<a class="text-sm text-white hover:brightness-75" href="/">Products</a>
