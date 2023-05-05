@@ -26,6 +26,7 @@ importers:
       '@voulr/config': workspace:^1.0.0
       '@voulr/ui': workspace:^0.0.1
       '@yushijinhun/three-minifier-rollup': ^0.4.0
+      simplex-noise: ^4.0.1
       svelte: ^3.54.0
       svelte-check: ^3.0.1
       svelte-sequential-preprocessor: ^1.0.0
@@ -41,6 +42,7 @@ importers:
       '@voulr/config': link:../../packages/config
       '@voulr/ui': link:../../packages/ui
       '@yushijinhun/three-minifier-rollup': 0.4.0
+      simplex-noise: 4.0.1
       svelte-sequential-preprocessor: 1.0.0
       three: 0.152.2
     devDependencies:
@@ -49,6 +51,35 @@ importers:
       svelte: 3.58.0
       svelte-check: 3.2.0_svelte@3.58.0
       tslib: 2.5.0
+      vite: 4.3.3
+
+  apps/web:
+    specifiers:
+      '@sveltejs/adapter-auto': ^2.0.0
+      '@sveltejs/kit': ^1.5.0
+      '@vercel/analytics': ^1.0.0
+      '@voulr/config': workspace:^1.0.0
+      '@voulr/ui': workspace:^0.0.1
+      i: ^0.3.7
+      pnpm: ^8.4.0
+      svelte: ^3.54.0
+      svelte-check: ^3.0.1
+      tslib: ^2.4.1
+      typescript: ^5.0.0
+      vite: ^4.3.0
+    dependencies:
+      '@vercel/analytics': 1.0.0
+      '@voulr/config': link:../../packages/config
+      '@voulr/ui': link:../../packages/ui
+      i: 0.3.7
+      pnpm: 8.4.0
+    devDependencies:
+      '@sveltejs/adapter-auto': 2.0.1_@sveltejs+kit@1.15.9
+      '@sveltejs/kit': 1.15.9_svelte@3.58.0+vite@4.3.3
+      svelte: 3.58.0
+      svelte-check: 3.2.0_svelte@3.58.0
+      tslib: 2.5.0
+      typescript: 5.0.4
       vite: 4.3.3
 
   packages/assets:
@@ -1333,6 +1364,11 @@ packages:
       function-bind: 1.1.1
     dev: false
 
+  /i/0.3.7:
+    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
+    engines: {node: '>=0.4'}
+    dev: false
+
   /ignore-walk/5.0.1:
     resolution: {integrity: sha512-yemi4pMf51WKT7khInJqAvsIGzoqYXblnsz0ql8tM+yi1EKYTY1evX4NAbJrLL/Aanr2HyZeluqU+Oi7MGHokw==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
@@ -1726,6 +1762,12 @@ packages:
     engines: {node: '>= 6'}
     dev: false
 
+  /pnpm/8.4.0:
+    resolution: {integrity: sha512-oW5jpFgCmXHIVOU5HZLBWGBtCH7K4JSRdpk7/f+Dtp+KhUsX5NQaWzzYyU9TX7eAsfYMko179133gbUS+JTrMw==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
+
   /postcss-import/15.1.0_postcss@8.4.23:
     resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
     engines: {node: '>=14.0.0'}
@@ -2018,6 +2060,10 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
     dev: true
+
+  /simplex-noise/4.0.1:
+    resolution: {integrity: sha512-zl/+bdSqW7HJOQ0oDbxrNYaF4F5ik0i7M6YOYmEoIJNtg16NpvWaTTM1Y7oV/7T0jFljawLgYPS81Uu2rsfo1A==}
+    dev: false
 
   /sirv/2.0.3:
     resolution: {integrity: sha512-O9jm9BsID1P+0HOi81VpXPoDxYP374pkOLzACAoyUQ/3OUVndNpsz6wMnY2z+yOxzbllCKZrM+9QrWsv4THnyA==}

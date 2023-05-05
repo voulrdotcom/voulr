@@ -16,7 +16,7 @@
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Data Engine
 				</a>
-				<a href="/" class="w-mim whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
+				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Generative AI Platform
 				</a>
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
@@ -31,7 +31,7 @@
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Data Engine
 				</a>
-				<a href="/" class="w-mim whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
+				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Generative AI Platform
 				</a>
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
@@ -46,7 +46,7 @@
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Data Engine
 				</a>
-				<a href="/" class="w-mim whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
+				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Generative AI Platform
 				</a>
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
@@ -61,7 +61,7 @@
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Data Engine
 				</a>
-				<a href="/" class="w-mim whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
+				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
 					Generative AI Platform
 				</a>
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">

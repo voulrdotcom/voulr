@@ -2,6 +2,8 @@
 	"private": true,
 	"scripts": {
 		"landing": "pnpm --filter @voulr/landing -- ",
+		"web": "pnpm --filter @voulr/web -- ",
+		"landing-web": "pnpm --parallel --filter=@voulr/landing --filter=@voulr/web -- ",
 		"ui": "pnpm --filter @voulr/ui -- ",
 		"assets": "pnpm --filter @voulr/assets -- "
 	},
