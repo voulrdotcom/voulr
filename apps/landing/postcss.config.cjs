@@ -1,1 +1,1 @@
-module.exports = require('@voulr/ui/postcss');
+module.exports = require('@voulr/config/postcss');

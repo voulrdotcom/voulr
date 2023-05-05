@@ -1,1 +1,1 @@
-module.exports = require('@voulr/ui/tailwind');
+module.exports = require('@voulr/config/tailwind');

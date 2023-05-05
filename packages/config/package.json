@@ -2,7 +2,9 @@
 	"name": "@voulr/config",
 	"version": "1.0.0",
 	"exports": {
-		"./eslint/web": "./eslint/web.cjs"
+		"./eslint/web": "./eslint/web.cjs",
+		"./postcss": "./tailwind/postcss.config.cjs",
+		"./tailwind": "./tailwind/tailwind.config.cjs"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +17,10 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.26.0",
 		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.14",
+		"postcss": "^8.4.23",
+		"tailwindcss": "^3.3.2"
 	}
 }
