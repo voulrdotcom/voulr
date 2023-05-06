@@ -26,7 +26,7 @@
 					href="https://www.app.voulr.com/register"
 					class="text-sm text-white transition-all duration-300 hover:brightness-75"
 				>
-					Try a Demo
+					Try Beta
 				</a>
 				<a
 					href="https://www.app.voulr.com/login"
@@ -37,7 +37,7 @@
 			</div>
 			<a
 				href="https://www.app.voulr.com/register"
-				class="rounded-md bg-white px-3 py-1.5 text-sm lg:hidden">Try a Demo</a
+				class="rounded-md bg-white px-3 py-1.5 text-sm lg:hidden">Try Beta</a
 			>
 		</nav>
 	</div>

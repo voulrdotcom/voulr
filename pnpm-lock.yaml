@@ -57,6 +57,9 @@ importers:
     specifiers:
       '@sveltejs/adapter-auto': ^2.0.0
       '@sveltejs/kit': ^1.5.0
+      '@tanstack/svelte-query': ^4.29.5
+      '@trpc/client': ^10.25.0
+      '@trpc/server': ^10.25.0
       '@vercel/analytics': ^1.0.0
       '@voulr/config': workspace:^1.0.0
       '@voulr/ui': workspace:^0.0.1
@@ -64,15 +67,24 @@ importers:
       pnpm: ^8.4.0
       svelte: ^3.54.0
       svelte-check: ^3.0.1
+      trpc-svelte-query-adapter: ^2.1.0
+      trpc-sveltekit: ^3.5.6
       tslib: ^2.4.1
       typescript: ^5.0.0
       vite: ^4.3.0
+      zod: ^3.21.4
     dependencies:
+      '@tanstack/svelte-query': 4.29.5_svelte@3.58.0
+      '@trpc/client': 10.25.0_@trpc+server@10.25.0
+      '@trpc/server': 10.25.0
       '@vercel/analytics': 1.0.0
       '@voulr/config': link:../../packages/config
       '@voulr/ui': link:../../packages/ui
       i: 0.3.7
       pnpm: 8.4.0
+      trpc-svelte-query-adapter: 2.1.0
+      trpc-sveltekit: 3.5.6_paojb4dkmsesz6hzuxhril7jve
+      zod: 3.21.4
     devDependencies:
       '@sveltejs/adapter-auto': 2.0.1_@sveltejs+kit@1.15.9
       '@sveltejs/kit': 1.15.9_svelte@3.58.0+vite@4.3.3
@@ -534,12 +546,37 @@ packages:
       - supports-color
     dev: true
 
+  /@tanstack/query-core/4.29.5:
+    resolution: {integrity: sha512-xXIiyQ/4r9KfaJ3k6kejqcaqFXXBTzN2aOJ5H1J6aTJE9hl/nbgAdfF6oiIu0CD5xowejJEJ6bBg8TO7BN4NuQ==}
+    dev: false
+
+  /@tanstack/svelte-query/4.29.5_svelte@3.58.0:
+    resolution: {integrity: sha512-8FKUEBPzTcn1jyro9bhvihaZC858gT2XkHfrKNrN7J4fJDj/ZB0X+7xk9bpwWQ1vboe4mKvBreD916MFs+WA6A==}
+    peerDependencies:
+      svelte: ^3.54.0
+    dependencies:
+      '@tanstack/query-core': 4.29.5
+      svelte: 3.58.0
+    dev: false
+
   /@threlte/core/5.0.9:
     resolution: {integrity: sha512-3u8SGLD/fzOh0sEf1MDa0FVpp7oLqdEUR8nvGEkWZvGDwKUlhe0XxSmXNzvAYwCSnNLsYYfwiAWy8wBrVkoRlg==}
     dev: false
 
   /@threlte/preprocess/0.0.2:
     resolution: {integrity: sha512-Eb3u3nAEBSFpadQvCdeZKy0xE4kgnlmxeTxnzTsmvUJt5ZEadbMg1+/LXn0oAYgFO72YQ62CJ7WI4hmoQSpOeA==}
+    dev: false
+
+  /@trpc/client/10.25.0_@trpc+server@10.25.0:
+    resolution: {integrity: sha512-XWuzbbACX2fzB9UHVkPJtaaAeFiyPjQSC3YgnRtDwjQx03/nt7OsxTBxvG0kblCN0Z2zZrnLF65aDrMJEP43LQ==}
+    peerDependencies:
+      '@trpc/server': 10.25.0
+    dependencies:
+      '@trpc/server': 10.25.0
+    dev: false
+
+  /@trpc/server/10.25.0:
+    resolution: {integrity: sha512-OKcGw2iZMUV8zCHoS+uLYGVq2tbZhhK0TPbb0pGhT+KTN8oWYPG+oYpTe9He9J1A2y8qcRAoy5u1zdiUUOiFEg==}
     dev: false
 
   /@types/cookie/0.5.1:
@@ -1934,6 +1971,10 @@ packages:
     hasBin: true
     dev: true
 
+  /proxy-deep/3.1.1:
+    resolution: {integrity: sha512-kppbvLUNJ4IOMZds9/4gz/rtT5OFiesy3XosLsgMKlF3vb6GA5Y3ptyDlzKLcOcUBW+zaY+RiMINTsgE+O6e+Q==}
+    dev: false
+
   /publint/0.1.11:
     resolution: {integrity: sha512-sD0rtIEadks83MkpomJswBO/YHExJLkta1TyqUhb0/aVV+o3ZlVnwsDPjCAow8tpfxmLGutCSLWq32yfhPB98w==}
     engines: {node: '>=16'}
@@ -2423,6 +2464,29 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /trpc-svelte-query-adapter/2.1.0:
+    resolution: {integrity: sha512-PQP/OurS8Vr6NtZyk0SOXry4yQaQpz9PBvnBHNHT7TMASyUavHqe/x95QuUlMsa6+KXN2o2bz2Qcz6Qt2JDBvQ==}
+    dependencies:
+      '@tanstack/svelte-query': 4.29.5_svelte@3.58.0
+      '@trpc/client': 10.25.0_@trpc+server@10.25.0
+      '@trpc/server': 10.25.0
+      proxy-deep: 3.1.1
+      svelte: 3.58.0
+    dev: false
+
+  /trpc-sveltekit/3.5.6_paojb4dkmsesz6hzuxhril7jve:
+    resolution: {integrity: sha512-Pc702QeplqxUeIa5aFBHK+22SqyuC1FObi792bpgY8glavR3wm/7mAYbfSCfT+iFhoFQQS1g9GR/Tb994WzXxg==}
+    peerDependencies:
+      '@sveltejs/adapter-node': ^1.2.3
+      '@trpc/client': ^10.21.1
+      '@trpc/server': ^10.21.1
+      '@types/ws': ^8.5.4
+      ws: ^8.13.0
+    dependencies:
+      '@trpc/client': 10.25.0_@trpc+server@10.25.0
+      '@trpc/server': 10.25.0
+    dev: false
+
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: false
@@ -2572,3 +2636,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+    dev: false
