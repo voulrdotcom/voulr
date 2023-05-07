@@ -3,14 +3,20 @@
 	"scripts": {
 		"landing": "pnpm --filter @voulr/landing -- ",
 		"web": "pnpm --filter @voulr/web -- ",
-		"landing-web": "pnpm --parallel --filter=@voulr/landing --filter=@voulr/web -- ",
+		"landing-web": "turbo run dev --parallel --filter=@voulr/landing --filter=@voulr/web",
 		"ui": "pnpm --filter @voulr/ui -- ",
-		"assets": "pnpm --filter @voulr/assets -- "
+		"assets": "pnpm --filter @voulr/assets -- ",
+		"dev": "dotenv -- turbo run dev",
+		"build": "turbo run build",
+		"lint": "turbo run lint"
 	},
 	"devDependencies": {
 		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.8.1",
 		"prettier-plugin-tailwindcss": "^0.2.8",
 		"svelte": "^3.54.0"
+	},
+	"dependencies": {
+		"dotenv-cli": "^7.2.1"
 	}
 }

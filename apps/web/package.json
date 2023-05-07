@@ -20,10 +20,13 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@aws-sdk/client-ses": "^3.328.0",
 		"@tanstack/svelte-query": "^4.29.5",
 		"@trpc/client": "^10.25.0",
 		"@trpc/server": "^10.25.0",
+		"@types/node": "^20.1.0",
 		"@vercel/analytics": "^1.0.0",
+		"@voulr/assets": "workspace:^1.0.0",
 		"@voulr/config": "workspace:^1.0.0",
 		"@voulr/ui": "workspace:^0.0.1",
 		"i": "^0.3.7",

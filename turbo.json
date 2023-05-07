@@ -1,0 +1,16 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"pipeline": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": [".svelte-kit/**", ".vercel/**"]
+		},
+		"lint": {},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		}
+	},
+	"globalDependencies": [".env"],
+	"globalEnv": ["AWS_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY"]
+}
