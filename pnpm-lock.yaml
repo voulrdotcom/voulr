@@ -59,6 +59,7 @@ importers:
   apps/web:
     specifiers:
       '@aws-sdk/client-ses': ^3.328.0
+      '@prisma/client': ^4.13.0
       '@sveltejs/adapter-auto': ^2.0.0
       '@sveltejs/kit': ^1.5.0
       '@tanstack/svelte-query': ^4.29.5
@@ -71,6 +72,7 @@ importers:
       '@voulr/ui': workspace:^0.0.1
       i: ^0.3.7
       pnpm: ^8.4.0
+      prisma: ^4.13.0
       svelte: ^3.54.0
       svelte-check: ^3.0.1
       trpc-svelte-query-adapter: ^2.1.0
@@ -81,6 +83,7 @@ importers:
       zod: ^3.21.4
     dependencies:
       '@aws-sdk/client-ses': 3.328.0
+      '@prisma/client': 4.13.0_prisma@4.13.0
       '@tanstack/svelte-query': 4.29.5_svelte@3.58.0
       '@trpc/client': 10.25.0_@trpc+server@10.25.0
       '@trpc/server': 10.25.0
@@ -91,6 +94,7 @@ importers:
       '@voulr/ui': link:../../packages/ui
       i: 0.3.7
       pnpm: 8.4.0
+      prisma: 4.13.0
       trpc-svelte-query-adapter: 2.1.0
       trpc-sveltekit: 3.5.6_paojb4dkmsesz6hzuxhril7jve
       zod: 3.21.4
@@ -1201,6 +1205,29 @@ packages:
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
+
+  /@prisma/client/4.13.0_prisma@4.13.0:
+    resolution: {integrity: sha512-YaiiICcRB2hatxsbnfB66uWXjcRw3jsZdlAVxmx0cFcTc/Ad/sKdHCcWSnqyDX47vAewkjRFwiLwrOUjswVvmA==}
+    engines: {node: '>=14.17'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.13.0-50.1e7af066ee9cb95cf3a403c78d9aab3e6b04f37a
+      prisma: 4.13.0
+    dev: false
+
+  /@prisma/engines-version/4.13.0-50.1e7af066ee9cb95cf3a403c78d9aab3e6b04f37a:
+    resolution: {integrity: sha512-fsQlbkhPJf08JOzKoyoD9atdUijuGBekwoOPZC3YOygXEml1MTtgXVpnUNchQlRSY82OQ6pSGQ9PxUe4arcSLQ==}
+    dev: false
+
+  /@prisma/engines/4.13.0:
+    resolution: {integrity: sha512-HrniowHRZXHuGT9XRgoXEaP2gJLXM5RMoItaY2PkjvuZ+iHc0Zjbm/302MB8YsPdWozAPHHn+jpFEcEn71OgPw==}
+    requiresBuild: true
+    dev: false
 
   /@sveltejs/adapter-auto/2.0.1_@sveltejs+kit@1.15.9:
     resolution: {integrity: sha512-anxxYMcQy7HWSKxN4YNaVcgNzCHtNFwygq72EA1Xv7c+5gSECOJ1ez1PYoLciPiFa7A3XBvMDQXUFJ2eqLDtAA==}
@@ -2728,6 +2755,15 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
+
+  /prisma/4.13.0:
+    resolution: {integrity: sha512-L9mqjnSmvWIRCYJ9mQkwCtj4+JDYYTdhoyo8hlsHNDXaZLh/b4hR0IoKIBbTKxZuyHQzLopb/+0Rvb69uGV7uA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.13.0
+    dev: false
 
   /proxy-deep/3.1.1:
     resolution: {integrity: sha512-kppbvLUNJ4IOMZds9/4gz/rtT5OFiesy3XosLsgMKlF3vb6GA5Y3ptyDlzKLcOcUBW+zaY+RiMINTsgE+O6e+Q==}

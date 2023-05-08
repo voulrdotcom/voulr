@@ -7,7 +7,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"push": "dotenv -e ../../.env -- prisma db push --schema=./src/lib/prisma/schema.prisma"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -21,6 +22,7 @@
 	"type": "module",
 	"dependencies": {
 		"@aws-sdk/client-ses": "^3.328.0",
+		"@prisma/client": "^4.13.0",
 		"@tanstack/svelte-query": "^4.29.5",
 		"@trpc/client": "^10.25.0",
 		"@trpc/server": "^10.25.0",
@@ -31,6 +33,7 @@
 		"@voulr/ui": "workspace:^0.0.1",
 		"i": "^0.3.7",
 		"pnpm": "^8.4.0",
+		"prisma": "^4.13.0",
 		"trpc-svelte-query-adapter": "^2.1.0",
 		"trpc-sveltekit": "^3.5.6",
 		"zod": "^3.21.4"

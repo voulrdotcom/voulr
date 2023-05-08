@@ -12,5 +12,5 @@
 		}
 	},
 	"globalDependencies": [".env"],
-	"globalEnv": ["AWS_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY"]
+	"globalEnv": ["AWS_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY", "DATABASE_URL"]
 }
