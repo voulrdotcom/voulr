@@ -1,4 +1,5 @@
 <script lang="ts">
+	// Props
 	export let href: string;
 </script>
 

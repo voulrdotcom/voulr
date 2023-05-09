@@ -4,13 +4,11 @@
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
 
-	let username: string;
-	let email: string;
+	let usernameOrEmail: string;
 	let password: string;
 
-	$: query = trpc($page).auth.register.createQuery({
-		username,
-		email,
+	$: query = trpc($page).auth.login.createQuery({
+		usernameOrEmail,
 		password
 	});
 </script>
@@ -22,34 +20,20 @@
 			<form
 				class="flex w-11/12 flex-col items-center justify-center py-12 min-[700px]:w-3/4 min-[700px]:py-16"
 			>
-				<h1 class="w-full pb-9 text-left text-2xl text-white">Create your account</h1>
+				<h1 class="w-full pb-9 text-left text-2xl text-white">Sign in to your account</h1>
 
-				<!-- username -->
+				<!--kusername or email -->
 				<label
 					class={`${
-						$query.isError && $query.error.message.includes('Username') ? 'pb-9' : 'pb-6'
+						$query.isError && $query.error.message.includes('Username or email') ? 'pb-9' : 'pb-6'
 					} relative flex w-full flex-col text-neutral-400 transition-all duration-300 ease-in-out`}
 				>
-					<p class="pb-1.5 pl-1.5">Username</p>
+					<p class="pb-1.5 pl-1.5">Username or email</p>
 					<input
-						bind:value={username}
+						bind:value={usernameOrEmail}
 						class="h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
 					/>
-					<ErrorMessage message={$query.error?.message} includes={'Username'} />
-				</label>
-
-				<!-- email -->
-				<label
-					class={`${
-						$query.isError && $query.error.message.includes('Email') ? 'pb-9' : 'pb-6'
-					} relative flex w-full flex-col text-neutral-400 transition-all duration-300 ease-in-out`}
-				>
-					<p class="pb-1.5 pl-1.5">Email</p>
-					<input
-						bind:value={email}
-						class="h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
-					/>
-					<ErrorMessage message={$query.error?.message} includes={'Email'} />
+					<ErrorMessage message={$query.error?.message} includes={'Username or email'} />
 				</label>
 
 				<!-- password -->
@@ -75,8 +59,8 @@
 			</form>
 		</div>
 		<p class="ml-5 text-neutral-500">
-			Already have an account?
-			<a class="text-voulr-pink hover:brightness-75" href="/login">Sign in</a>
+			Don't have an account?
+			<a class="text-voulr-pink hover:brightness-75" href="/register">Sign up</a>
 		</p>
 	</div>
 </div>
