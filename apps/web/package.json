@@ -8,7 +8,8 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"push": "dotenv -e ../../.env -- prisma db push --schema=./src/lib/prisma/schema.prisma"
+		"push": "dotenv -e ../../.env -- prisma db push --schema=./src/lib/prisma/schema.prisma",
+		"generate": "dotenv -e ../../.env -- prisma generate --schema=./src/lib/prisma/schema.prisma"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
