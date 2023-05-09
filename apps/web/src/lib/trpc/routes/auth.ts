@@ -1,5 +1,4 @@
 import { t } from '$lib/trpc/t';
-import { p } from '$lib/prisma/p';
 import { z } from 'zod';
 
 const registerSchema = z.object({
