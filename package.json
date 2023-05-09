@@ -6,6 +6,7 @@
 		"landing-web": "turbo run dev --parallel --filter=@voulr/landing --filter=@voulr/web",
 		"ui": "pnpm --filter @voulr/ui -- ",
 		"assets": "pnpm --filter @voulr/assets -- ",
+		"database": "pnpm --filter @voulr/database -- ",
 		"dev": "dotenv -- turbo run dev",
 		"build": "turbo run build",
 		"lint": "turbo run lint"

@@ -1,6 +1,6 @@
 import type { RequestEvent } from '@sveltejs/kit';
 import type { inferAsyncReturnType } from '@trpc/server';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@voulr/database';
 
 const p = new PrismaClient();
 

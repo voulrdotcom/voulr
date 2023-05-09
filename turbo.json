@@ -9,8 +9,14 @@
 		"dev": {
 			"cache": false,
 			"persistent": true
+		},
+		"db:generate": {
+			"cache": false
+		},
+		"db:push": {
+			"cache": false
 		}
 	},
 	"globalDependencies": [".env"],
-	"globalEnv": ["AWS_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY", "DATABASE_URL"]
+	"globalEnv": ["AWS_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY"]
 }
