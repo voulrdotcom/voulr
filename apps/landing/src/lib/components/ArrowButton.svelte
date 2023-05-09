@@ -2,7 +2,7 @@
 	export let href: string;
 </script>
 
-<a {href} class={`${$$props.class} group flex items-center gap-1.5`}>
+<a {href} class={`${$$props.class} group flex items-center`}>
 	<slot />
 	<svg width="10" height="10" fill="none" viewBox="0 0 10 10" aria-hidden="true">
 		<g fill-rule="evenodd">

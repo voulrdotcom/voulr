@@ -23,13 +23,13 @@
 		<div class="hidden gap-6 lg:flex">
 			<ArrowButton
 				href="https://www.app.voulr.com/register"
-				class="stroke-white stroke-[1.5px] text-sm text-white transition-all duration-300 hover:brightness-75"
+				class="gap-1.5 stroke-white stroke-[1.5px] text-sm text-white transition-all duration-300 hover:brightness-75"
 			>
 				Try Beta
 			</ArrowButton>
 			<ArrowButton
 				href="https://www.app.voulr.com/login"
-				class="stroke-white stroke-[1.5px] text-sm text-white transition-all duration-300 hover:brightness-75"
+				class="gap-1.5 stroke-white stroke-[1.5px] text-sm text-white transition-all duration-300 hover:brightness-75"
 			>
 				Log In
 			</ArrowButton>
