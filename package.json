@@ -3,8 +3,8 @@
 	"scripts": {
 		"landing": "pnpm --filter @voulr/landing -- ",
 		"web": "pnpm --filter @voulr/web -- ",
-		"landing-web": "turbo run dev --parallel --filter=@voulr/landing --filter=@voulr/web",
 		"ui": "pnpm --filter @voulr/ui -- ",
+		"config": "pnpm --filter @voulr/config -- ",
 		"assets": "pnpm --filter @voulr/assets -- ",
 		"database": "pnpm --filter @voulr/database -- ",
 		"dev": "dotenv -- turbo run dev",

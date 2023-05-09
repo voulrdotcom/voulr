@@ -21,16 +21,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@threlte/core": "^5.0.9",
-		"@threlte/preprocess": "^0.0.2",
-		"@types/three": "^0.151.0",
 		"@vercel/analytics": "^1.0.0",
 		"@voulr/assets": "workspace:^1.0.0",
 		"@voulr/config": "workspace:^1.0.0",
-		"@voulr/ui": "workspace:^0.0.1",
-		"@yushijinhun/three-minifier-rollup": "^0.4.0",
-		"simplex-noise": "^4.0.1",
-		"svelte-sequential-preprocessor": "^1.0.0",
-		"three": "^0.152.2"
+		"@voulr/ui": "workspace:^0.0.1"
 	}
 }

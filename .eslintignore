@@ -9,6 +9,7 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+.turbo
 
 # /apps
 apps/*/.DS_Store
@@ -22,6 +23,7 @@ apps/*/!.env.example
 apps/*/pnpm-lock.yaml
 apps/*/package-lock.json
 apps/*/yarn.lock
+apps/*/.turbo
 
 # /packages
 packages/*/.DS_Store
@@ -35,4 +37,5 @@ packages/*/!.env.example
 packages/*/pnpm-lock.yaml
 packages/*/package-lock.json
 packages/*/yarn.lock
+packages/*/.turbo
 

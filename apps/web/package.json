@@ -28,7 +28,7 @@
 		"@vercel/analytics": "^1.0.0",
 		"@voulr/assets": "workspace:^1.0.0",
 		"@voulr/config": "workspace:^1.0.0",
-		"@voulr/database": "workspace:^0.0.0",
+		"@voulr/database": "workspace:*",
 		"@voulr/ui": "workspace:^0.0.1",
 		"trpc-svelte-query-adapter": "^2.1.0",
 		"trpc-sveltekit": "^3.5.6",
