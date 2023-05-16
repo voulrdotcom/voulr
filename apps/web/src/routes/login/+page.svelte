@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { trpc } from '$lib/trpc/client';
 	import { page } from '$app/stores';
-	import { voulrWhiteLockup } from '@voulr/assets';
+	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
 
 	let usernameOrEmail: string;

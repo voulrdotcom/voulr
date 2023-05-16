@@ -5,7 +5,8 @@
 	"exports": {
 		"./eslint/web": "./eslint/web.cjs",
 		"./postcss": "./tailwind/postcss.config.cjs",
-		"./tailwind": "./tailwind/tailwind.config.cjs"
+		"./tailwind": "./tailwind/tailwind.config.cjs",
+		"./app.css": "./tailwind/app.css"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"

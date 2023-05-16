@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArrowButton } from '@voulr/ui';
-	import { voulrWhiteLockup } from '@voulr/assets';
+	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	import { MenuBar } from '@voulr/ui';
 </script>
 

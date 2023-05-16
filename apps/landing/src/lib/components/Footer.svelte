@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { voulrWhiteLockup } from '@voulr/assets';
+	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 </script>
 
 <div class="border-t border-dashed border-t-neutral-800">
@@ -15,7 +15,10 @@
 			<!-- products -->
 			<div class="col-span-1 flex flex-col gap-3">
 				<h2 class="pb-2 text-sm uppercase tracking-widest text-neutral-500">Products</h2>
-				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
+				<a
+					href="/"
+					class="font-italic w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300"
+				>
 					Data Engine
 				</a>
 				<a href="/" class="w-min whitespace-nowrap text-sm text-neutral-500 hover:text-neutral-300">
