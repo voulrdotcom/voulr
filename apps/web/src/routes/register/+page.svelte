@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { trpc } from '@voulr/api';
+	import { trpc } from '$lib/trpc/client';
 	import { page } from '$app/stores';
-	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
-	import { ErrorMessage } from '@voulr/ui';
+	import { voulrWhiteLockup } from '@voulr/assets';
+	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
 
 	let username: string;
 	let email: string;
@@ -21,11 +21,13 @@
 		class="flex w-full flex-col items-center rounded-lg border border-neutral-800 bg-neutral-950 px-3 py-14 text-white"
 	>
 		<h1 class="w-full max-w-[450px] pb-1.5 text-left text-2xl">Create your account</h1>
+
+		<!-- generic error -->
 		<ErrorMessage
 			active={$query.isError &&
-				!['Username', 'Email', 'Password'].some(
-					(i) => $query.error.message.split(' ').indexOf(i) >= 0
-				)}
+				!$query.error?.message.includes('Username') &&
+				!$query.error?.message.includes('Email') &&
+				!$query.error?.message.includes('Password')}
 			message={$query.error?.message}
 			class="w-full max-w-[450px] pb-6 text-left"
 		/>
