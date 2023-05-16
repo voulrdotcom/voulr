@@ -3,7 +3,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['General-Sans']
+                sans: ['General-Sans', 'sans-serif']
             },
             colors: {
                 'voulr-purple': '#6432af',
