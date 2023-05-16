@@ -5,9 +5,9 @@ import { PrismaClient } from '@voulr/database';
 const p = new PrismaClient();
 
 export async function createContext(event: RequestEvent) {
-	return {
-		p
-	};
+    return {
+        p
+    };
 }
 
 export type Context = inferAsyncReturnType<typeof createContext>;

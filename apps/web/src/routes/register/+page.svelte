@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { trpc } from '$lib/trpc/client';
+	import { trpc } from '@voulr/api';
 	import { page } from '$app/stores';
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
-	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
+	import { ErrorMessage } from '@voulr/ui';
 
 	let username: string;
 	let email: string;
@@ -15,68 +15,72 @@
 	});
 </script>
 
-<div class="flex h-full w-full flex-col items-center justify-center">
-	<div class="flex w-[350px] max-w-[550px] flex-col justify-center gap-9 py-16 min-[700px]:w-1/2">
-		<img src={voulrWhiteLockup} alt="voulr" class="ml-5 w-24" />
-		<div class="flex w-full justify-center rounded-lg border border-neutral-800 bg-neutral-950">
-			<form
-				class="flex w-11/12 flex-col items-center justify-center py-12 min-[700px]:w-3/4 min-[700px]:py-16"
-			>
-				<h1 class="w-full pb-9 text-left text-2xl text-white">Create your account</h1>
+<div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16">
+	<img src={voulrWhiteLockup} alt="voulr" class="ml-6 w-24" />
+	<form
+		class="flex w-full flex-col items-center rounded-lg border border-neutral-800 bg-neutral-950 px-3 py-14 text-white"
+	>
+		<h1 class="w-full max-w-[450px] pb-1.5 text-left text-2xl">Create your account</h1>
+		<ErrorMessage
+			active={$query.isError &&
+				!['Username', 'Email', 'Password'].some(
+					(i) => $query.error.message.split(' ').indexOf(i) >= 0
+				)}
+			message={$query.error?.message}
+			class="w-full max-w-[450px] pb-6 text-left"
+		/>
 
-				<!-- username -->
-				<label
-					class={`${
-						$query.isError && $query.error.message.includes('Username') ? 'pb-9' : 'pb-6'
-					} relative flex w-full flex-col text-neutral-400 transition-all duration-300 ease-in-out`}
-				>
-					<p class="pb-1.5 pl-1.5">Username</p>
-					<input
-						bind:value={username}
-						class="h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
-					/>
-					<ErrorMessage message={$query.error?.message} includes={'Username'} />
-				</label>
+		<!-- username -->
+		<label class="flex w-full max-w-[450px] flex-col gap-1.5 pb-3">
+			<p class="pl-1.5">Username</p>
+			<input
+				bind:value={username}
+				class="h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+			/>
+			<ErrorMessage
+				message={$query.error?.message}
+				active={$query.error?.message.includes('Username')}
+				class="pl-1.5"
+			/>
+		</label>
 
-				<!-- email -->
-				<label
-					class={`${
-						$query.isError && $query.error.message.includes('Email') ? 'pb-9' : 'pb-6'
-					} relative flex w-full flex-col text-neutral-400 transition-all duration-300 ease-in-out`}
-				>
-					<p class="pb-1.5 pl-1.5">Email</p>
-					<input
-						bind:value={email}
-						class="h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
-					/>
-					<ErrorMessage message={$query.error?.message} includes={'Email'} />
-				</label>
+		<!-- email -->
+		<label class="flex w-full max-w-[450px] flex-col gap-1.5 pb-3">
+			<p class="pl-1.5">Email</p>
+			<input
+				bind:value={email}
+				class="h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+			/>
+			<ErrorMessage
+				message={$query.error?.message}
+				active={$query.error?.message.includes('Email')}
+				class="pl-1.5"
+			/>
+		</label>
 
-				<!-- password -->
-				<label
-					class={`${
-						$query.isError && $query.error.message.includes('Password') ? 'pb-9' : 'pb-6'
-					} relative flex w-full flex-col text-neutral-400 transition-all duration-300 ease-in-out`}
-				>
-					<p class="pb-1.5 pl-1.5">Password</p>
-					<input
-						type="password"
-						bind:value={password}
-						class=" h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
-					/>
-					<ErrorMessage message={$query.error?.message} includes={'Password'} />
-				</label>
-				<button
-					on:click={async () => await $query.refetch()}
-					class="h-12 w-full rounded-lg bg-voulr-pink text-white"
-				>
-					Continue
-				</button>
-			</form>
-		</div>
-		<p class="ml-5 text-neutral-500">
-			Already have an account?
-			<a class="text-voulr-pink hover:brightness-75" href="/login">Sign in</a>
-		</p>
-	</div>
+		<!-- password -->
+		<label class="flex w-full max-w-[450px] flex-col gap-1.5 pb-3">
+			<p class="pl-1.5">Password</p>
+			<input
+				type="password"
+				bind:value={password}
+				class=" h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+			/>
+			<ErrorMessage
+				message={$query.error?.message}
+				active={$query.error?.message.includes('Password')}
+				class="pl-1.5"
+			/>
+		</label>
+		<button
+			on:click={async () => !$query.isError && (await $query.refetch())}
+			class="h-12 w-full max-w-[450px] rounded-lg bg-voulr-pink"
+		>
+			Continue
+		</button>
+	</form>
+	<p class="pl-6 text-neutral-500">
+		Already have an account?
+		<a class="text-voulr-pink hover:brightness-75" href="/login">Sign in</a>
+	</p>
 </div>

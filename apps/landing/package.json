@@ -1,6 +1,6 @@
 {
 	"name": "@voulr/landing",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -22,8 +22,8 @@
 	"type": "module",
 	"dependencies": {
 		"@vercel/analytics": "^1.0.0",
-		"@voulr/assets": "workspace:^1.0.0",
-		"@voulr/config": "workspace:^1.0.0",
-		"@voulr/ui": "workspace:^0.0.1"
+		"@voulr/assets": "workspace:*",
+		"@voulr/config": "workspace:*",
+		"@voulr/ui": "workspace:*"
 	}
 }

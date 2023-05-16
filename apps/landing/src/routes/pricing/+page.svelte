@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ArrowButton from '$lib/components/ArrowButton.svelte';
+	import { ArrowButton } from '@voulr/ui';
 </script>
 
 <div class="container mx-auto px-6">

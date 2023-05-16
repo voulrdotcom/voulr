@@ -6,10 +6,7 @@
 		"ui": "pnpm --filter @voulr/ui -- ",
 		"config": "pnpm --filter @voulr/config -- ",
 		"assets": "pnpm --filter @voulr/assets -- ",
-		"database": "pnpm --filter @voulr/database -- ",
-		"dev": "dotenv -- turbo run dev",
-		"build": "turbo run build",
-		"lint": "turbo run lint"
+		"database": "pnpm --filter @voulr/database -- "
 	},
 	"devDependencies": {
 		"prettier": "^2.8.8",
@@ -18,7 +15,6 @@
 		"svelte": "^3.54.0"
 	},
 	"dependencies": {
-		"@sveltejs/adapter-vercel": "^2.4.3",
-		"dotenv-cli": "^7.2.1"
+		"@sveltejs/adapter-vercel": "^2.4.3"
 	}
 }

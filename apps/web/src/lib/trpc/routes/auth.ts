@@ -7,8 +7,8 @@ const registerSchema = z.object({
         .trim()
         .min(4, { message: 'Username must be at least 4 characters.' })
         .max(16, { message: 'Username must be less than 16 characters.' })
-        .regex(/^[a-za-z0-9_]+$/, {
-            message: 'Username must only contain letters, numbers, and underscores.'
+        .regex(/^[a-za-z0-9]+$/, {
+            message: 'Username must only contain letters and numbers.'
         }),
     email: z
         .string({ required_error: 'Email is required.' })
@@ -26,10 +26,10 @@ const registerSchema = z.object({
 
 const loginSchema = z.object({
     usernameOrEmail: z
-        .string({ required_error: 'Username or email is required.' })
+        .string({ required_error: 'Username/email is required.' })
         .trim()
-        .min(4, { message: 'Username or email must be at least 4 characters.' })
-        .max(64, { message: 'Username or email must be less than 64 characters.' }),
+        .min(4, { message: 'Username/email must be at least 4 characters.' })
+        .max(64, { message: 'Username/email must be less than 64 characters.' }),
     password: z
         .string({ required_error: 'Password is required.' })
         .trim()

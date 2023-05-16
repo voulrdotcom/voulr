@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ArrowButton from '$lib/components/ArrowButton.svelte';
+	import { ArrowButton } from '@voulr/ui';
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
-	import menue from '@voulr/assets/svgs/menue.svg';
+	import { MenuBar } from '@voulr/ui';
 </script>
 
 <div class="container mx-auto px-6">
@@ -36,6 +36,6 @@
 		</div>
 
 		<!-- menue (for small screens) -->
-		<img src={menue} alt="menue" height="30" width="30" class="lg:hidden" />
+		<MenuBar class="h-8 lg:hidden" />
 	</div>
 </div>

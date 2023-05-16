@@ -1,6 +1,6 @@
 {
 	"name": "@voulr/web",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -20,18 +20,16 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@aws-sdk/client-ses": "^3.328.0",
 		"@tanstack/svelte-query": "^4.29.5",
-		"@trpc/client": "^10.25.0",
-		"@trpc/server": "^10.25.0",
-		"@types/node": "^20.1.0",
+		"@trpc/client": "^10.26.0",
+		"@trpc/server": "^10.26.0",
 		"@vercel/analytics": "^1.0.0",
-		"@voulr/assets": "workspace:^1.0.0",
-		"@voulr/config": "workspace:^1.0.0",
+		"@voulr/assets": "workspace:*",
+		"@voulr/config": "workspace:*",
 		"@voulr/database": "workspace:*",
-		"@voulr/ui": "workspace:^0.0.1",
+		"@voulr/ui": "workspace:*",
 		"trpc-svelte-query-adapter": "^2.1.0",
-		"trpc-sveltekit": "^3.5.6",
+		"trpc-sveltekit": "^3.5.7",
 		"zod": "^3.21.4"
 	}
 }

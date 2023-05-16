@@ -1,6 +1,7 @@
 {
 	"name": "@voulr/config",
-	"version": "1.0.0",
+	"version": "0.0.0",
+	"private": true,
 	"exports": {
 		"./eslint/web": "./eslint/web.cjs",
 		"./postcss": "./tailwind/postcss.config.cjs",
@@ -9,7 +10,6 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"license": "MIT",
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
