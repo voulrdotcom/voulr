@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
+	import { goto } from '$app/navigation';
 
 	let username: string;
 	let email: string;
@@ -13,6 +14,10 @@
 		email,
 		password
 	});
+
+	$: if ($query.data?.success) {
+		goto('/verify-email');
+	}
 </script>
 
 <div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16">

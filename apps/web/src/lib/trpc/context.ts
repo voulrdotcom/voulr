@@ -6,6 +6,7 @@ const p = new PrismaClient();
 
 export async function createContext(event: RequestEvent) {
     return {
+        cookies: event.cookies,
         p
     };
 }
