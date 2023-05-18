@@ -19,5 +19,12 @@
 		}
 	},
 	"globalDependencies": [".env"],
-	"globalEnv": ["AWS_ACCESS_KEY", "AWS_SECRET_ACCESS_KEY", "JWT_SECRET"]
+	"globalEnv": [
+		"DATABASE_URL",
+		"AWS_ACCESS_KEY",
+		"AWS_SECRET_ACCESS_KEY",
+		"JWT_SECRET",
+		"ACCESS_TOKEN_EXPIRES_IN",
+		"REFRESH_TOKEN_EXPIRES_IN"
+	]
 }
