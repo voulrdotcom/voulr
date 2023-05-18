@@ -145,9 +145,11 @@ importers:
   packages/database:
     specifiers:
       '@prisma/client': ^4.14.1
+      dotenv-cli: ^7.2.1
       prisma: 4.14.1
     dependencies:
       '@prisma/client': 4.14.1_prisma@4.14.1
+      dotenv-cli: 7.2.1
     devDependencies:
       prisma: 4.14.1
 
