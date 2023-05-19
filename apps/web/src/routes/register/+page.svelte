@@ -4,10 +4,12 @@
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
 	import { goto } from '$app/navigation';
+	import { Eye } from '@voulr/ui';
 
-	let username: string;
-	let email: string;
-	let password: string;
+	let username = '';
+	let email = '';
+	let password = '';
+	let eyeState: 'OPEN' | 'CLOSED' = 'OPEN';
 
 	$: query = trpc($page).auth.register.createQuery({
 		username,
@@ -68,17 +70,27 @@
 		<!-- password -->
 		<label class="flex w-full max-w-[450px] flex-col gap-1.5 pb-3">
 			<p class="pl-1.5">Password</p>
-			<input
-				type="password"
-				bind:value={password}
-				class=" h-12 w-full rounded-lg border border-neutral-800 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
-			/>
+			<div
+				class="flex h-12 w-full flex-row items-center rounded-lg border border-neutral-800 bg-transparent ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+			>
+				<input
+					{...{ type: eyeState === 'OPEN' ? 'password' : 'text' }}
+					bind:value={password}
+					class="h-full w-full rounded-l-lg bg-transparent pl-3 outline-none"
+				/>
+				<Eye
+					active={password.length > 0}
+					bind:eyeState
+					class="pr-4 text-neutral-500 hover:text-white"
+				/>
+			</div>
 			<ErrorMessage
 				message={$query.error?.message}
 				active={$query.error?.message.includes('Password')}
 				class="pl-1.5"
 			/>
 		</label>
+
 		<button
 			on:click={async () => !$query.isError && (await $query.refetch())}
 			class="h-12 w-full max-w-[450px] rounded-lg bg-voulr-pink"
