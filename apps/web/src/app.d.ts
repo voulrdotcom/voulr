@@ -1,40 +1,19 @@
-import jwt from 'jwt';
+import type { User } from '@prisma/client';
 
-enum Plan {
-    HOBBY,
-    PRO,
-    BUSINESS
-}
+/*
+ * we add user type from prisma
+ * schema to locals and page data
+ * so we can access both fully typesafe.
+ */
 
 declare global {
     namespace App {
         interface Locals {
-            user: {
-                username: string;
-                email: string;
-                plan: Plan;
-            };
+            user?: User;
         }
-        // interface Error {}
-        // interface PageData {}
-        // interface Platform {}
-    }
-}
-
-declare module 'jsonwebtoken' {
-    export interface AccessToken extends jwt.JwtPayload {
-        username: string;
-        email: string;
-        plan: Plan;
-        iat: number;
-        sub: string;
-        exp: number;
-    }
-    export interface RefreshToken extends jwt.JwtPayload {
-        userId: number;
-        iat: number;
-        sub: string;
-        exp: number;
+        interface PageData {
+            user?: User;
+        }
     }
 }
 

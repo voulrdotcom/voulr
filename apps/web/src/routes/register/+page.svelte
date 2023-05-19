@@ -6,6 +6,7 @@
 	import { goto } from '$app/navigation';
 	import { Eye } from '@voulr/ui';
 
+	// state
 	let username = '';
 	let email = '';
 	let password = '';
@@ -17,9 +18,8 @@
 		password
 	});
 
-	$: if ($query.data?.success) {
-		goto('/verify-email');
-	}
+	$: $query.data?.success && goto('/verify-email');
+	$: $page.data.user?.emailVerified && goto('/'); // user already logged in
 </script>
 
 <div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16">
