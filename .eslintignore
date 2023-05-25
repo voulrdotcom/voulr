@@ -1,4 +1,5 @@
-# / .DS_Store
+# / 
+.DS_Store
 node_modules
 /build
 /.svelte-kit
@@ -24,6 +25,8 @@ apps/*/pnpm-lock.yaml
 apps/*/package-lock.json
 apps/*/yarn.lock
 apps/*/.turbo
+apps/*/target
+apps/*/Cargo.lock
 
 # /packages
 packages/*/.DS_Store
@@ -38,4 +41,3 @@ packages/*/pnpm-lock.yaml
 packages/*/package-lock.json
 packages/*/yarn.lock
 packages/*/.turbo
-

@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { trpc } from '$lib/trpc/client';
 	import { page } from '$app/stores';
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
-	import ErrorMessage from '$lib/components/ErrorMessage.svelte';
 	import { goto } from '$app/navigation';
-	import { Eye } from '@voulr/ui';
+	import { Eye, ErrorMessage } from '@voulr/ui';
 
 	// state
 	let usernameOrEmail = '';

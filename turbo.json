@@ -7,24 +7,10 @@
 		},
 		"lint": {},
 		"dev": {
-			"dependson": ["^db:generate"],
 			"cache": false,
 			"persistent": true
-		},
-		"db:generate": {
-			"cache": false
-		},
-		"db:push": {
-			"cache": false
 		}
 	},
 	"globalDependencies": [".env"],
-	"globalEnv": [
-		"DATABASE_URL",
-		"AWS_ACCESS_KEY",
-		"AWS_SECRET_ACCESS_KEY",
-		"JWT_SECRET",
-		"ACCESS_TOKEN_EXPIRES_IN",
-		"REFRESH_TOKEN_EXPIRES_IN"
-	]
+	"globalEnv": ["DATABASE_URL", "JWT_SECRET"]
 }

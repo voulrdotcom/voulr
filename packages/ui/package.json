@@ -1,17 +1,16 @@
 {
 	"name": "@voulr/ui",
 	"version": "0.0.0",
-	"private": true,
 	"main": "./index.ts",
 	"types": "./index.ts",
+	"private": true,
 	"peerDependencies": {
 		"svelte": "^3.54.0"
 	},
 	"devDependencies": {
 		"svelte": "^3.54.0"
 	},
-	"type": "module",
 	"dependencies": {
-		"@voulr/config": "workspace:^1.0.0"
+		"@voulr/config": "workspace:*"
 	}
 }

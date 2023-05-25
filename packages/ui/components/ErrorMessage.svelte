@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Warning from '../icons/Warning.svelte';
+	import { Warning } from '../index';
 
 	// Props
 	export let message: string | undefined;

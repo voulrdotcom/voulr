@@ -25,6 +25,8 @@ apps/*/pnpm-lock.yaml
 apps/*/package-lock.json
 apps/*/yarn.lock
 apps/*/.turbo
+apps/*/target
+apps/*/Cargo.lock
 
 # /packages
 packages/*/.DS_Store

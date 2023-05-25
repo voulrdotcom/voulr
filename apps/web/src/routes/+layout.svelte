@@ -7,7 +7,7 @@
 	// vercel analytics
 	inject({ mode: dev ? 'development' : 'production' });
 
-	// svelte-query
+	// tanstack query
 	const queryClient = new QueryClient({
 		defaultOptions: {
 			queries: {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
+	import { voulrWhiteLockup } from '@voulr/assets';
 </script>
 
 <div class="border-t border-dashed border-t-neutral-800">

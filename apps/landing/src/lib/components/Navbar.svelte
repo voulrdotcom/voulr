@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { ArrowButton } from '@voulr/ui';
-	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
+	import { voulrWhiteLockup } from '@voulr/assets';
+	import { WEB_LOCAL, WEB_SITE } from '@voulr/constants';
+	import { dev } from '$app/environment';
 	import { MenuBar } from '@voulr/ui';
 </script>
 
@@ -17,13 +19,13 @@
 		</nav>
 		<div class="hidden gap-6 lg:flex">
 			<ArrowButton
-				href="https://www.app.voulr.com/register"
+				href={`${dev ? WEB_LOCAL : WEB_SITE}/reigster`}
 				class="gap-1.5 stroke-white stroke-[1.5px] text-sm text-white transition-all duration-300 hover:brightness-75"
 			>
 				Try Beta
 			</ArrowButton>
 			<ArrowButton
-				href="https://www.app.voulr.com/login"
+				href={`${dev ? WEB_LOCAL : WEB_SITE}/reigster`}
 				class="gap-1.5 stroke-white stroke-[1.5px] text-sm text-white transition-all duration-300 hover:brightness-75"
 			>
 				Log In

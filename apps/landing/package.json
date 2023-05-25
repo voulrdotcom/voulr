@@ -24,6 +24,7 @@
 		"@vercel/analytics": "^1.0.0",
 		"@voulr/assets": "workspace:*",
 		"@voulr/config": "workspace:*",
+		"@voulr/constants": "workspace:*",
 		"@voulr/ui": "workspace:*"
 	}
 }
