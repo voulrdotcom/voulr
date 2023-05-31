@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+	"core",
+	"apps/server",
+]
+
+[workspace.package]
+license = "MIT"
+edition = "2021"
+repository = "https://github.com/vloe/voulr"
+
+[workspace.dependencies]
+rspc = { version = "0.1.4" }
+specta = { version = "1.0.4" }
+tokio = { version = "1.28.2" }
+httpz = { version = "0.0.3" }
+
+[patch.crates-io]
+specta = { git = "https://github.com/oscartbeaumont/specta", branch = "v2" }
+rspc = { git = "https://github.com/oscartbeaumont/rspc", branch = "specta-v2" }

@@ -1,0 +1,10 @@
+[package]
+name = "voulr-core"
+version = "0.0.0"
+license.workspace = true
+repository.workspace = true
+edition.workspace = true
+
+[dependencies]
+rspc = { workspace = true, features = ["alpha"] }
+httpz = { workspace = true, features = ["axum"] }

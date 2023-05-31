@@ -1,12 +1,15 @@
 [package]
-name = "server"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+name = "voulr-server"
+version = "0.0.0"
+license.workspace = true
+repository.workspace = true
+edition.workspace = true
 
 [dependencies]
+voulr-core = { path = "../../core" }
 axum = "0.6.18"
+rspc = { workspace = true, features = ["axum"] }
 serde = { version = "1.0.163", features = ["derive"] } 
-tokio = {version = "1.28.1", features = ["full"]}
+tokio = { workspace = true, features = ["full"] }
 tower-http = { version = "0.4.0", features=['cors'] }
+httpz = { workspace = true, features = ["axum"] }

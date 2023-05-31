@@ -9,12 +9,12 @@
 
 	// tanstack query
 	const queryClient = new QueryClient({
-		defaultOptions: {
-			queries: {
-				enabled: false,
-				retry: false
-			}
-		}
+		//defaultOptions: {
+		//	queries: {
+		//		enabled: false,
+		//		retry: false
+		//	}
+		//}
 	});
 </script>
 
