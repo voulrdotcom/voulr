@@ -2,7 +2,7 @@
 	"$schema": "https://turbo.build/schema.json",
 	"pipeline": {
 		"build": {
-			"dependson": ["^build", "^db:generate"],
+			"dependson": ["^build"],
 			"outputs": [".svelte-kit/**", ".vercel/**"]
 		},
 		"lint": {},
@@ -11,6 +11,5 @@
 			"persistent": true
 		}
 	},
-	"globalDependencies": [".env"],
 	"globalEnv": ["DATABASE_URL", "JWT_SECRET"]
 }
