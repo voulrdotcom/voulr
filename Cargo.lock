@@ -1215,6 +1215,9 @@ version = "0.0.0"
 dependencies = [
  "httpz 0.0.3",
  "rspc",
+ "serde",
+ "serde_json",
+ "specta",
 ]
 
 [[package]]
