@@ -8,7 +8,9 @@
 		"config": "pnpm --filter @voulr/config -- ",
 		"landing-web": "dotenv -- turbo run dev --parallel --filter=@voulr/landing --filter=@voulr/web",
 		"dev": "dotenv -- turbo run dev",
-		"build": "dotenv -- turbo run build"
+		"build": "dotenv -- turbo run build",
+		"db:generate": "cd core && cargo prisma generate",
+		"db:push": "cd core && cargo prisma db push --skip-generate"
 	},
 	"devDependencies": {
 		"prettier": "^2.8.8",

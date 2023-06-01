@@ -21,17 +21,17 @@ computing gzip size...
 .svelte-kit/output/client/_app/immutable/assets/voulr-lockup.320036fc.svg         4.18 kB │ gzip: 1.91 kB
 .svelte-kit/output/client/_app/immutable/assets/_layout.f82ec000.css             34.25 kB │ gzip: 6.85 kB
 .svelte-kit/output/client/_app/immutable/chunks/2.d775a97f.js                     0.08 kB │ gzip: 0.10 kB
-.svelte-kit/output/client/_app/immutable/chunks/1.8b6b5065.js                     0.09 kB │ gzip: 0.10 kB
-.svelte-kit/output/client/_app/immutable/chunks/0.398f1bd7.js                     0.09 kB │ gzip: 0.10 kB
-.svelte-kit/output/client/_app/immutable/chunks/stores.a7f228ad.js                0.24 kB │ gzip: 0.17 kB
+.svelte-kit/output/client/_app/immutable/chunks/1.c3010730.js                     0.09 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/0.40aa0a3d.js                     0.09 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/stores.a947547d.js                0.24 kB │ gzip: 0.17 kB
 .svelte-kit/output/client/_app/immutable/entry/_page.svelte.3796ec99.js           0.84 kB │ gzip: 0.52 kB
-.svelte-kit/output/client/_app/immutable/entry/_error.svelte.44245528.js          1.76 kB │ gzip: 0.90 kB
-.svelte-kit/output/client/_app/immutable/chunks/singletons.e447788d.js            2.84 kB │ gzip: 1.43 kB
-.svelte-kit/output/client/_app/immutable/entry/app.1762e360.js                    5.72 kB │ gzip: 2.27 kB
+.svelte-kit/output/client/_app/immutable/entry/_error.svelte.70a0d88a.js          1.76 kB │ gzip: 0.90 kB
+.svelte-kit/output/client/_app/immutable/chunks/singletons.4363a68b.js            2.84 kB │ gzip: 1.43 kB
+.svelte-kit/output/client/_app/immutable/entry/app.d064e0cf.js                    5.72 kB │ gzip: 2.27 kB
 .svelte-kit/output/client/_app/immutable/chunks/index.0e183466.js                 7.38 kB │ gzip: 2.98 kB
-.svelte-kit/output/client/_app/immutable/entry/_layout.svelte.2b7379c9.js        14.59 kB │ gzip: 4.80 kB
-.svelte-kit/output/client/_app/immutable/entry/start.51dea05d.js                 23.35 kB │ gzip: 9.28 kB
-✓ built in 464ms
+.svelte-kit/output/client/_app/immutable/entry/_layout.svelte.e320f44e.js        14.59 kB │ gzip: 4.80 kB
+.svelte-kit/output/client/_app/immutable/entry/start.5e1b8ebb.js                 23.35 kB │ gzip: 9.28 kB
+✓ built in 503ms
 .svelte-kit/output/server/vite-manifest.json                                       2.08 kB
 .svelte-kit/output/server/_app/immutable/assets/voulr-white-lockup.417ce9ab.svg    4.18 kB
 .svelte-kit/output/server/_app/immutable/assets/voulr-lockup.320036fc.svg          4.18 kB
@@ -50,4 +50,4 @@ Run npm run preview to preview your production build locally.
 > Using @sveltejs/adapter-auto
   Could not detect a supported production environment. See https://kit.svelte.dev/docs/adapters to learn how to configure your app to run on the platform of your choosing
   ✔ done
-✓ built in 4.98s
+✓ built in 5.17s

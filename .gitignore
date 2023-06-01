@@ -43,5 +43,8 @@ packages/*/package-lock.json
 packages/*/yarn.lock
 packages/*/.turbo
 
+# /crates
+crates/prisma/src/prisma.rs
+
 
 

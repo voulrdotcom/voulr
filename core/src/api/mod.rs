@@ -1,7 +1,13 @@
-use rspc::{alpha::Rspc, Config, Router};
+use crate::prisma::PrismaClient;
+use rspc::{alpha::Rspc, Config};
 use std::sync::Arc;
 
-pub(self) const R: Rspc<()> = Rspc::new();
+pub struct Ctx {
+    db: Arc<PrismaClient>, // Your database connection
+}
+
+pub(self) const R: Rspc<Ctx> = Rspc::new();
+pub type Router = rspc::Router<Ctx>;
 
 mod auth;
 
