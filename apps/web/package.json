@@ -22,7 +22,6 @@
 	"dependencies": {
 		"@rspc/client": "^0.1.3",
 		"@tanstack/svelte-query": "^4.29.5",
-		"@vercel/analytics": "^1.0.0",
 		"@voulr/assets": "workspace:*",
 		"@voulr/config": "workspace:*",
 		"@voulr/constants": "workspace:*",

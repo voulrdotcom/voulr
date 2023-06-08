@@ -1,5 +1,4 @@
 // components
-export { default as ErrorPage } from './components/ErrorPage.svelte';
 export { default as ErrorMessage } from './components/ErrorMessage.svelte';
 export { default as ArrowButton } from './components/ArrowButton.svelte';
 

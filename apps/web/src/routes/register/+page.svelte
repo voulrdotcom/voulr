@@ -2,7 +2,7 @@
 	import voulrWhiteLockup from '@voulr/assets/svgs/voulr-white-lockup.svg';
 	import { createQuery } from '@tanstack/svelte-query';
 	import { client } from '$lib/rspc/client';
-	import type { RegisterArgs } from '$lib/rspc/bindings';
+	import type { RegisterArgs } from '$lib/types/bindings';
 
 	// state
 	let registerArgs: RegisterArgs = {

@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-	import { ErrorPage } from '@voulr/ui';
 </script>
 
-<ErrorPage status={$page.status} message={$page.error?.message} />
+<div class="flex h-screen w-full flex-col items-center justify-center gap-3">
+	<h1 class="text-7xl">{$page.status}</h1>
+	<p>{$page.error?.message}</p>
+</div>
