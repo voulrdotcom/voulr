@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-cloudflare": "^2.3.0",
 		"@voulr/assets": "workspace:*",
 		"@voulr/config": "workspace:*",
 		"@voulr/constants": "workspace:*",
