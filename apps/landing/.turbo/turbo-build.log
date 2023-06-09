@@ -21,16 +21,16 @@ computing gzip size...
 .svelte-kit/output/client/_app/immutable/assets/voulr-lockup.320036fc.svg         4.18 kB │ gzip: 1.91 kB
 .svelte-kit/output/client/_app/immutable/assets/_layout.92bcd5d4.css             33.21 kB │ gzip: 6.67 kB
 .svelte-kit/output/client/_app/immutable/chunks/2.20a3dde2.js                     0.08 kB │ gzip: 0.10 kB
-.svelte-kit/output/client/_app/immutable/chunks/1.0f38beeb.js                     0.09 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/1.b86f781b.js                     0.09 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/0.0bc62879.js                     0.09 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/entry/_page.svelte.e5daece9.js           0.53 kB │ gzip: 0.35 kB
-.svelte-kit/output/client/_app/immutable/entry/_error.svelte.ba8d997c.js          1.17 kB │ gzip: 0.68 kB
-.svelte-kit/output/client/_app/immutable/chunks/singletons.df7c2ed9.js            2.84 kB │ gzip: 1.43 kB
-.svelte-kit/output/client/_app/immutable/entry/app.8fa17603.js                    5.63 kB │ gzip: 2.25 kB
+.svelte-kit/output/client/_app/immutable/entry/_error.svelte.19178111.js          1.17 kB │ gzip: 0.68 kB
+.svelte-kit/output/client/_app/immutable/chunks/singletons.205fd838.js            2.84 kB │ gzip: 1.43 kB
+.svelte-kit/output/client/_app/immutable/entry/app.aaaa50bf.js                    5.63 kB │ gzip: 2.25 kB
 .svelte-kit/output/client/_app/immutable/chunks/index.8e3b309f.js                 7.45 kB │ gzip: 3.01 kB
 .svelte-kit/output/client/_app/immutable/entry/_layout.svelte.5da03150.js         8.99 kB │ gzip: 3.35 kB
-.svelte-kit/output/client/_app/immutable/entry/start.9eab6f00.js                 23.35 kB │ gzip: 9.28 kB
-✓ built in 398ms
+.svelte-kit/output/client/_app/immutable/entry/start.2f867630.js                 23.35 kB │ gzip: 9.28 kB
+✓ built in 437ms
 .svelte-kit/output/server/vite-manifest.json                                       1.94 kB
 .svelte-kit/output/server/_app/immutable/assets/voulr-white-lockup.417ce9ab.svg    4.18 kB
 .svelte-kit/output/server/_app/immutable/assets/voulr-lockup.320036fc.svg          4.18 kB
@@ -47,4 +47,4 @@ Run npm run preview to preview your production build locally.
 
 > Using @sveltejs/adapter-cloudflare
   ✔ done
-✓ built in 5.31s
+✓ built in 5.16s

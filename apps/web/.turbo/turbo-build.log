@@ -7,7 +7,7 @@ vite v4.3.3 building SSR bundle for production...
 transforming...
 
 warn - The utility `w-[calc(100%-theme('spacing[some_key][1.5]'))]` contains an invalid theme value and was not generated.
-✓ 101 modules transformed.
+✓ 100 modules transformed.
 rendering chunks...
 
 vite v4.3.3 building for production...
@@ -17,32 +17,32 @@ rendering chunks...
 computing gzip size...
 .svelte-kit/output/client/_app/version.json                                       0.03 kB │ gzip: 0.05 kB
 .svelte-kit/output/client/_app/immutable/assets/voulr-white-lockup.417ce9ab.svg   4.18 kB │ gzip: 1.91 kB
-.svelte-kit/output/client/vite-manifest.json                                      5.01 kB │ gzip: 0.79 kB
+.svelte-kit/output/client/vite-manifest.json                                      5.01 kB │ gzip: 0.78 kB
 .svelte-kit/output/client/_app/immutable/assets/_layout.6b500955.css             34.05 kB │ gzip: 6.68 kB
-.svelte-kit/output/client/_app/immutable/chunks/1.af70a7ba.js                     0.08 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/1.ba77df31.js                     0.08 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/2.de903507.js                     0.08 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/0.7c15bf55.js                     0.09 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/3.2b494c42.js                     0.09 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/4.b2257253.js                     0.09 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/entry/_page.svelte.d8b25ab7.js           0.39 kB │ gzip: 0.29 kB
 .svelte-kit/output/client/_app/immutable/chunks/index.96f214cf.js                 0.82 kB │ gzip: 0.50 kB
-.svelte-kit/output/client/_app/immutable/entry/error.svelte.18adf355.js           0.98 kB │ gzip: 0.57 kB
-.svelte-kit/output/client/_app/immutable/chunks/singletons.8d77c5a2.js            2.45 kB │ gzip: 1.23 kB
+.svelte-kit/output/client/_app/immutable/entry/error.svelte.ba32730d.js           0.98 kB │ gzip: 0.57 kB
+.svelte-kit/output/client/_app/immutable/chunks/singletons.9e8a1cb8.js            2.45 kB │ gzip: 1.23 kB
 .svelte-kit/output/client/_app/immutable/entry/register-page.svelte.130e3753.js   3.61 kB │ gzip: 1.65 kB
 .svelte-kit/output/client/_app/immutable/entry/login-page.svelte.d79c88db.js      3.61 kB │ gzip: 1.65 kB
-.svelte-kit/output/client/_app/immutable/entry/app.8673091b.js                    6.21 kB │ gzip: 2.37 kB
+.svelte-kit/output/client/_app/immutable/entry/app.a628f209.js                    6.21 kB │ gzip: 2.37 kB
 .svelte-kit/output/client/_app/immutable/chunks/context.0c6dc904.js               6.45 kB │ gzip: 2.50 kB
 .svelte-kit/output/client/_app/immutable/chunks/index.0e12d768.js                 7.47 kB │ gzip: 3.00 kB
 .svelte-kit/output/client/_app/immutable/chunks/client.5abb0fa8.js               10.63 kB │ gzip: 3.58 kB
 .svelte-kit/output/client/_app/immutable/entry/_layout.svelte.8894830a.js        20.54 kB │ gzip: 5.77 kB
-.svelte-kit/output/client/_app/immutable/entry/start.cf61bf38.js                 23.35 kB │ gzip: 9.28 kB
-✓ built in 450ms
+.svelte-kit/output/client/_app/immutable/entry/start.46e3309c.js                 23.35 kB │ gzip: 9.28 kB
+✓ built in 449ms
 .svelte-kit/output/server/vite-manifest.json                                       3.09 kB
 .svelte-kit/output/server/_app/immutable/assets/voulr-white-lockup.417ce9ab.svg    4.18 kB
 .svelte-kit/output/server/_app/immutable/assets/_layout.5954fd20.css              34.04 kB
 .svelte-kit/output/server/internal.js                                              0.19 kB
 .svelte-kit/output/server/entries/pages/_page.svelte.js                            0.21 kB
-.svelte-kit/output/server/chunks/hooks.server.js                                   0.34 kB
+.svelte-kit/output/server/chunks/hooks.server.js                                   0.29 kB
 .svelte-kit/output/server/entries/fallbacks/error.svelte.js                        0.83 kB
 .svelte-kit/output/server/entries/pages/login/_page.svelte.js                      2.05 kB
 .svelte-kit/output/server/entries/pages/register/_page.svelte.js                   2.06 kB
@@ -57,7 +57,6 @@ computing gzip size...
 
 Run npm run preview to preview your production build locally.
 
-> Using @sveltejs/adapter-auto
-  Could not detect a supported production environment. See https://kit.svelte.dev/docs/adapters to learn how to configure your app to run on the platform of your choosing
+> Using @sveltejs/adapter-cloudflare
   ✔ done
-✓ built in 5.13s
+✓ built in 5.26s
