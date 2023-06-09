@@ -8,7 +8,6 @@
 		"config": "pnpm --filter @voulr/config -- ",
 		"landing-web": "dotenv -- turbo run dev --parallel --filter=@voulr/landing --filter=@voulr/web",
 		"dev": "dotenv -- turbo run dev",
-		"build": "turbo run build",
 		"db:generate": "cd core && cargo prisma generate",
 		"db:push": "cd core && cargo prisma db push --skip-generate"
 	},
