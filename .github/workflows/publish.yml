@@ -30,7 +30,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build
-        run: pnpm turbo run build
+        run: pnpm run build
       - name: Publish
         uses: cloudflare/pages-action@v1
         with:
