@@ -1,4 +1,5 @@
 use axum::{routing::get, Router, Server};
+use rspc::integrations::httpz::Request;
 use std::net::SocketAddr;
 use std::sync::Arc;
 use tower_http::cors::{Any, CorsLayer};
@@ -19,7 +20,9 @@ async fn main() {
         .route("/", get(|| async { "voulr server (;" }))
         .nest(
             "/rspc",
-            router.endpoint(move || Ctx { db: prisma_client }).axum(),
+            router
+                .endpoint(move |req: Request| Ctx { db: prisma_client })
+                .axum(),
         )
         .layer(cors);
 

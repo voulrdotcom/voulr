@@ -12,7 +12,15 @@ generator client {
 model User {
   id                Int         @id @default(autoincrement())
   date_created      DateTime    @default(now())
+  username          String      @unique
   email             String      @unique
   email_verified    Boolean     @default(false)
   password          String
+  plan              Plan        @default(Hobby)
+}
+
+enum Plan {
+    Hobby
+    Pro
+    Business
 }

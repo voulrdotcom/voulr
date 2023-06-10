@@ -10,7 +10,8 @@ voulr-core = { path = "../../core" }
 voulr-prisma = { path = "../../crates/prisma" }
 axum = "0.6.18"
 rspc = { workspace = true, features = ["axum"] }
-serde = { version = "1.0.163", features = ["derive"] } 
+jsonwebtoken = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
 tokio = { workspace = true, features = ["full"] }
 tower-http = { version = "0.4.0", features=['cors'] }
 httpz = { workspace = true, features = ["axum"] }

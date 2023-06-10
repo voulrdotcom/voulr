@@ -18,6 +18,8 @@ rspc = { version = "0.1.4" }
 specta = { version = "1.0.4" }
 tokio = { version = "1.28.2" }
 httpz = { version = "0.0.3" }
+jsonwebtoken = { version = "8.3.0"}
+serde = { version = "1.0.163" } 
 
 [patch.crates-io]
 specta = { git = "https://github.com/oscartbeaumont/specta", branch = "v2" }
