@@ -6,7 +6,7 @@ export const handle = (async ({ event, resolve }) => {
     const routeId = event.route.id;
 
     // redirect on invalid or protected route
-    if (!routeId || routeId?.startsWith('/(protected)')) {
+    if (routeId?.startsWith('/(protected)')) {
         if (!user) throw redirect(303, '/login');
         // if (!user.emailVerified) throw redirect(303, '/verify-email');
     }
