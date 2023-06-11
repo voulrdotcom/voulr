@@ -19,24 +19,24 @@ computing gzip size...
 .svelte-kit/output/client/_app/immutable/assets/voulr-lockup.320036fc.svg            4.18 kB │ gzip: 1.91 kB
 .svelte-kit/output/client/vite-manifest.json                                         5.03 kB │ gzip: 0.79 kB
 .svelte-kit/output/client/_app/immutable/assets/_layout.24927b33.css                34.70 kB │ gzip: 6.83 kB
-.svelte-kit/output/client/_app/immutable/chunks/1.7dde31e1.js                        0.08 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/1.d5a9b781.js                        0.08 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/0.f6b62f6d.js                        0.09 kB │ gzip: 0.10 kB
-.svelte-kit/output/client/_app/immutable/chunks/3.f66b4dbd.js                        0.09 kB │ gzip: 0.10 kB
-.svelte-kit/output/client/_app/immutable/chunks/4.8ad04283.js                        0.09 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/3.bd766d61.js                        0.09 kB │ gzip: 0.10 kB
+.svelte-kit/output/client/_app/immutable/chunks/4.e6797390.js                        0.09 kB │ gzip: 0.10 kB
 .svelte-kit/output/client/_app/immutable/chunks/2.c3578ae7.js                        0.10 kB │ gzip: 0.11 kB
 .svelte-kit/output/client/_app/immutable/entry/(protected)-page.svelte.d8b25ab7.js   0.39 kB │ gzip: 0.29 kB
 .svelte-kit/output/client/_app/immutable/chunks/index.96f214cf.js                    0.82 kB │ gzip: 0.50 kB
-.svelte-kit/output/client/_app/immutable/entry/error.svelte.fc2ea139.js              0.98 kB │ gzip: 0.57 kB
-.svelte-kit/output/client/_app/immutable/chunks/singletons.1ccc5b4d.js               2.45 kB │ gzip: 1.23 kB
-.svelte-kit/output/client/_app/immutable/entry/login-page.svelte.9c3178ed.js         3.77 kB │ gzip: 1.72 kB
-.svelte-kit/output/client/_app/immutable/entry/register-page.svelte.5cdcc363.js      4.48 kB │ gzip: 1.87 kB
-.svelte-kit/output/client/_app/immutable/entry/app.c898b37d.js                       6.23 kB │ gzip: 2.38 kB
+.svelte-kit/output/client/_app/immutable/entry/error.svelte.d16e93cc.js              0.98 kB │ gzip: 0.57 kB
+.svelte-kit/output/client/_app/immutable/chunks/singletons.a77f33b9.js               2.45 kB │ gzip: 1.23 kB
+.svelte-kit/output/client/_app/immutable/entry/login-page.svelte.0293a708.js         3.77 kB │ gzip: 1.72 kB
+.svelte-kit/output/client/_app/immutable/entry/register-page.svelte.9e9669f2.js      4.48 kB │ gzip: 1.87 kB
+.svelte-kit/output/client/_app/immutable/entry/app.5d216a5e.js                       6.23 kB │ gzip: 2.38 kB
 .svelte-kit/output/client/_app/immutable/chunks/context.0c6dc904.js                  6.45 kB │ gzip: 2.50 kB
 .svelte-kit/output/client/_app/immutable/chunks/index.0e12d768.js                    7.47 kB │ gzip: 3.00 kB
-.svelte-kit/output/client/_app/immutable/chunks/client.542ee9ca.js                  10.62 kB │ gzip: 3.58 kB
+.svelte-kit/output/client/_app/immutable/chunks/client.af31e06a.js                  10.62 kB │ gzip: 3.58 kB
 .svelte-kit/output/client/_app/immutable/entry/_layout.svelte.8e17ff96.js           20.54 kB │ gzip: 5.77 kB
-.svelte-kit/output/client/_app/immutable/entry/start.ec3b61af.js                    23.35 kB │ gzip: 9.28 kB
-✓ built in 491ms
+.svelte-kit/output/client/_app/immutable/entry/start.0922dbe9.js                    23.35 kB │ gzip: 9.28 kB
+✓ built in 453ms
 .svelte-kit/output/server/vite-manifest.json                                 3.10 kB
 .svelte-kit/output/server/_app/immutable/assets/voulr-lockup.320036fc.svg    4.18 kB
 .svelte-kit/output/server/_app/immutable/assets/_layout.339ce6e6.css        34.70 kB
@@ -59,4 +59,4 @@ Run npm run preview to preview your production build locally.
 
 > Using @sveltejs/adapter-cloudflare
   ✔ done
-✓ built in 5.11s
+✓ built in 5.30s
