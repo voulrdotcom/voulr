@@ -28,6 +28,7 @@ apps/*/yarn.lock
 apps/*/.turbo
 apps/*/target
 apps/*/Cargo.lock
+apps/*/.turbo/turbo-build.log
 
 # /packages
 packages/*/.DS_Store
