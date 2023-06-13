@@ -11,10 +11,13 @@
 	};
 
 	$: query = createQuery(['auth.login'], () => client.mutation(['auth.login', loginArgs]));
-	$: $query.data && console.log($query.data);
+
+	// logging
+	$: $query.data && console.log('success:', $query.data);
+	$: $query.isError && console.log('fail:', $query.error);
 </script>
 
-<div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16">
+<div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16 lg:py-20">
 	<img src={voulrLockup} alt="voulr" class="ml-6 w-24" />
 	<div
 		class="flex justify-center rounded-lg border border-neutral-300 bg-gradient-to-br from-neutral-50 to-neutral-100 px-3 py-12 shadow-xl min-[600px]:py-16"

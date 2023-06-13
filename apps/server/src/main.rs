@@ -1,10 +1,9 @@
 use axum::{routing::get, Router, Server};
-use rspc::integrations::httpz::Request;
 use std::net::SocketAddr;
 use std::sync::Arc;
 use tower_http::cors::{Any, CorsLayer};
 use voulr_core::api::{mount, Ctx};
-use voulr_prisma::prisma::PrismaClient;
+use voulr_prisma::prisa::PrismaClient;
 
 #[tokio::main]
 async fn main() {
@@ -14,17 +13,17 @@ async fn main() {
         .allow_origin(Any);
 
     let router = mount();
-    let prisma_client = Arc::new(PrismaClient::_builder().build().await.unwrap());
+    let client = Arc::new(PrismaClient::_builder().build().await.unwrap());
 
     let app = Router::new()
         .route("/", get(|| async { "voulr server (;" }))
-        .nest(
-            "/rspc",
+        .nest("/rspc",
             router
-                .endpoint(move |req: Request| Ctx { db: prisma_client })
+                .endpoint(move || Ctx { db: client })
                 .axum(),
         )
         .layer(cors);
+
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
     println!("Listening on {} \n", addr);

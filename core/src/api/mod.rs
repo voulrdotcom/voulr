@@ -1,6 +1,6 @@
 use rspc::{alpha::Rspc, Config};
 use std::sync::Arc;
-use voulr_prisma::prisma::PrismaClient;
+use crate::prisma::PrismaClient;
 
 pub struct Ctx {
     pub db: Arc<PrismaClient>,

@@ -3,10 +3,14 @@
 export type Procedures = {
     queries: never,
     mutations: 
-        { key: "auth.login", input: LoginArgs, result: string } | 
-        { key: "auth.register", input: RegisterArgs, result: string },
+        { key: "auth.login", input: LoginArgs, result: User } | 
+        { key: "auth.register", input: RegisterArgs, result: User },
     subscriptions: never
 };
+
+export type User = { id: number; date_created: string; username: string; email: string; email_verified: boolean; password: string; plan: Plan }
+
+export type Plan = "Hobby" | "Pro" | "Business"
 
 export type LoginArgs = { usernameOrEmail: string; password: string }
 

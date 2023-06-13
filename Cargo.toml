@@ -12,15 +12,17 @@ edition = "2021"
 repository = "https://github.com/vloe/voulr"
 
 [workspace.dependencies]
-prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.8", features = ["rspc", "migrations"] }
-prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.8", features = ["rspc", "migrations"] }
+prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.8", features = ["rspc", "mysql", "migrations"] }
+prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-rust", tag = "0.6.8",  features = ["rspc", "mysql", "migrations"] }
+
 rspc = { version = "0.1.4" }
 specta = { version = "1.0.4" }
 tokio = { version = "1.28.2" }
-httpz = { version = "0.0.3" }
+httpz = { version = "0.0.4" }
 jsonwebtoken = { version = "8.3.0"}
 serde = { version = "1.0.163" } 
 
 [patch.crates-io]
 specta = { git = "https://github.com/oscartbeaumont/specta", branch = "v2" }
 rspc = { git = "https://github.com/oscartbeaumont/rspc", branch = "specta-v2" }
+
