@@ -13,6 +13,7 @@
 		"db:push": "cd core && cargo prisma db push --skip-generate"
 	},
 	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
 		"prettier": "^2.8.8",
 		"prettier-plugin-svelte": "^2.8.1",
 		"prettier-plugin-tailwindcss": "^0.2.8",

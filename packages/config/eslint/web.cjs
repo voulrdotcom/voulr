@@ -3,10 +3,14 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:svelte/recommended',
-        'prettier'
+        'prettier',
+        'plugin:prettier/recommended'
     ],
     parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'prettier'],
+    rules: {
+        'prettier/prettier': 'error'
+    },
     ignorePatterns: ['*.cjs'],
     parserOptions: {
         sourceType: 'module',
