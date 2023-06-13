@@ -1,6 +1,6 @@
 <script lang="ts">
-	import voulrLockup from '@voulr/assets/svgs/voulr-lockup.svg';
 	import { createQuery } from '@tanstack/svelte-query';
+	import voulrLockup from '@voulr/assets/svgs/voulr-lockup.svg';
 	import { client } from '$lib/rspc/client';
 	import type { LoginArgs } from '$lib/types/bindings';
 

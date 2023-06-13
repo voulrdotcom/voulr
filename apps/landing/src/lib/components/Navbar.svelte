@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ArrowButton } from '@voulr/ui';
 	import { voulrLockup } from '@voulr/assets';
+	import { ArrowButton } from '@voulr/ui';
 	import { MenuBar } from '@voulr/ui';
 </script>
 

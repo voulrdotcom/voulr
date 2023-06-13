@@ -10,7 +10,9 @@
 		"dev": "dotenv -- turbo run dev",
 		"build": "turbo run build",
 		"db:generate": "cd core && cargo prisma generate",
-		"db:push": "cd core && cargo prisma db push --skip-generate"
+		"db:push": "cd core && cargo prisma db push --skip-generate",
+		"format": "prettier --write .",
+		"lint": "turbo run lint"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.1.1",

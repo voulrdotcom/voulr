@@ -1,26 +1,26 @@
-    <script lang="ts">
-        import voulrLockup from '@voulr/assets/svgs/voulr-lockup.svg';
-        import { createQuery } from '@tanstack/svelte-query';
-        import { client } from '$lib/rspc/client';
-        import type { RegisterArgs } from '$lib/types/bindings';
+<script lang="ts">
+	import { createQuery } from '@tanstack/svelte-query';
+	import voulrLockup from '@voulr/assets/svgs/voulr-lockup.svg';
+	import { client } from '$lib/rspc/client';
+	import type { RegisterArgs } from '$lib/types/bindings';
 
-        // state
-        let registerArgs: RegisterArgs = {
-            username: '',
-            email: '',
-            password: ''
-        };
+	// state
+	let registerArgs: RegisterArgs = {
+		username: '',
+		email: '',
+		password: ''
+	};
 
-        $: query = createQuery(['auth.register'], () => client.mutation(['auth.register', registerArgs]));
+	$: query = createQuery(['auth.register'], () => client.mutation(['auth.register', registerArgs]));
 
-        // logging
-        $: $query.data && console.log("success:", $query.data);
-        $: $query.isError && console.log("fail:", $query.error);
-    </script>
+	// logging
+	$: $query.data && console.log('success:', $query.data);
+	$: $query.isError && console.log('fail:', $query.error);
+</script>
 
-    <div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16 lg:py-20">
-        <img src={voulrLockup} alt="voulr" class="ml-6 w-24" />
-        <div
+<div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16 lg:py-20">
+	<img src={voulrLockup} alt="voulr" class="ml-6 w-24" />
+	<div
 		class="flex justify-center rounded-lg border border-neutral-300 bg-gradient-to-br from-neutral-50 to-neutral-100 px-3 py-12 shadow-xl min-[600px]:py-16"
 	>
 		<form class="flex w-full max-w-[450px] flex-col items-center gap-6">
