@@ -1,17 +1,20 @@
 <script lang="ts">
 	import { createQuery } from '@tanstack/svelte-query';
 	import voulrLockup from '@voulr/assets/svgs/voulr-lockup.svg';
+	import { ErrorMessage } from '@voulr/ui';
 	import { client } from '$lib/rspc/client';
 	import type { RegisterArgs } from '$lib/types/bindings';
 
 	// state
 	let registerArgs: RegisterArgs = {
-		username: '',
 		email: '',
+		username: '',
 		password: ''
 	};
 
-	$: query = createQuery(['auth.register'], () => client.mutation(['auth.register', registerArgs]));
+	$: query = createQuery<Promise<null>, Error>(['auth.register'], () =>
+		client.mutation(['auth.register', registerArgs])
+	);
 
 	// logging
 	$: $query.data && console.log('success:', $query.data);
@@ -26,27 +29,31 @@
 		<form class="flex w-full max-w-[450px] flex-col items-center gap-6">
 			<h1 class="w-full pl-1.5 text-2xl">Create your account</h1>
 
-			<!-- username -->
-			<label class="flex w-full flex-col gap-1.5">
-				<p class="pl-1.5">Username</p>
-				<input
-					bind:value={registerArgs.username}
-					maxlength="16"
-					minlength="4"
-					required
-					class="h-12 w-full rounded-lg border border-neutral-300 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
-				/>
-			</label>
-
 			<!-- email -->
 			<label class="flex w-full flex-col gap-1.5">
 				<p class="pl-1.5">Email</p>
 				<input
 					bind:value={registerArgs.email}
-					type="email"
-					maxlength="64"
-					required
 					class="h-12 w-full rounded-lg border border-neutral-300 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+				/>
+				<ErrorMessage
+					class="pl-1.5"
+					message={$query.error?.message}
+					active={$query.error?.message.includes('Email')}
+				/>
+			</label>
+
+			<!-- username -->
+			<label class="flex w-full flex-col gap-1.5">
+				<p class="pl-1.5">Username</p>
+				<input
+					bind:value={registerArgs.username}
+					class="h-12 w-full rounded-lg border border-neutral-300 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+				/>
+				<ErrorMessage
+					class="pl-1.5"
+					message={$query.error?.message}
+					active={$query.error?.message.includes('Username')}
 				/>
 			</label>
 
@@ -56,10 +63,12 @@
 				<input
 					bind:value={registerArgs.password}
 					type="password"
-					minlength="7"
-					maxlength="64"
-					required
 					class="h-12 w-full rounded-lg border border-neutral-300 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+				/>
+				<ErrorMessage
+					class="pl-1.5"
+					message={$query.error?.message}
+					active={$query.error?.message.includes('Password')}
 				/>
 			</label>
 

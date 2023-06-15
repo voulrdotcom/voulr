@@ -1,9 +1,7 @@
-use super::{Ctx, R};
-use prisma_client_rust::or;
-use rspc::{alpha::AlphaRouter, Error, ErrorCode};
+use super::{utils::error, Ctx, R};
+use rspc::alpha::AlphaRouter;
 use serde::Deserialize;
 use specta::Type;
-use crate::prisma::user;
 
 pub fn mount() -> AlphaRouter<Ctx> {
     R.router()
@@ -11,52 +9,35 @@ pub fn mount() -> AlphaRouter<Ctx> {
             #[derive(Deserialize, Type)]
             #[serde(rename_all = "camelCase")]
             pub struct LoginArgs {
-                pub username_or_email: String,
+                pub email_or_username: String,
                 pub password: String,
             }
-            R.mutation(|Ctx { db }, LoginArgs { username_or_email, password }| async move {
-                let user = db
-                    .user()
-                    .find_first(vec![
-                        or![
-                            user::email::equals(username_or_email.clone()),
-                            user::username::equals(username_or_email)
-                        ],
-                        user::password::equals(password),
-                    ])
-                    .exec()
-                    .await
-                    .unwrap()
-                    .ok_or_else(|| {
-                        Error::new(
-                            ErrorCode::Forbidden,
-                            String::from("Username or password is incorrect.")
-                        )
-                    })?;
+            R.mutation(|ctx, args: LoginArgs| async move {
+                let email_or_username = args.email_or_username.trim();
+                let password = args.password.trim();
 
-                Ok(user)
+                if email_or_username.len() < 4 {
+                    return error(401, "Email or username must be at least 4 characters.");
+                }
+                if email_or_username.len() > 32 {
+                    return error(401, "Email or username can't be more than 32 characters.");
+                }
+                if password.len() < 8 {
+                    return error(401, "Password must be at least 8 characters.");
+                }
+                if password.len() > 32 {
+                    return error(401, "Password can't be more than 32 characters.");
+                }
+                Ok(())
             })
         })
         .procedure("register", {
             #[derive(Deserialize, Type)]
             pub struct RegisterArgs {
-                pub username: String,
                 pub email: String,
+                pub username: String,
                 pub password: String,
             }
-            R.mutation(|ctx, args: RegisterArgs| async move {
-                let user = ctx.db
-                    .user()
-                    .create(
-                        args.username,
-                        args.email,
-                        args.password, // todo: hash
-                        vec![],
-                    )
-                    .exec()
-                    .await?;
-
-                Ok(user)
-            })
+            R.mutation(|ctx, args: RegisterArgs| async move { Ok(()) })
         })
 }

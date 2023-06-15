@@ -1,6 +1,6 @@
+use crate::prisma::PrismaClient;
 use rspc::{alpha::Rspc, Config};
 use std::sync::Arc;
-use crate::prisma::PrismaClient;
 
 pub struct Ctx {
     pub db: Arc<PrismaClient>,
@@ -8,7 +8,8 @@ pub struct Ctx {
 pub(self) const R: Rspc<Ctx> = Rspc::new();
 pub type Router = rspc::Router<Ctx>;
 
-mod auth;
+pub mod auth;
+pub mod utils;
 
 pub fn mount() -> Arc<Router> {
     R.router()

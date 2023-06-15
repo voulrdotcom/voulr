@@ -1,16 +1,19 @@
 <script lang="ts">
 	import { createQuery } from '@tanstack/svelte-query';
 	import voulrLockup from '@voulr/assets/svgs/voulr-lockup.svg';
+	import { ErrorMessage } from '@voulr/ui';
 	import { client } from '$lib/rspc/client';
 	import type { LoginArgs } from '$lib/types/bindings';
 
 	// state
 	let loginArgs: LoginArgs = {
-		usernameOrEmail: '',
+		emailOrUsername: '',
 		password: ''
 	};
 
-	$: query = createQuery(['auth.login'], () => client.mutation(['auth.login', loginArgs]));
+	$: query = createQuery<Promise<null>, Error>(['auth.login'], () =>
+		client.mutation(['auth.login', loginArgs])
+	);
 
 	// logging
 	$: $query.data && console.log('success:', $query.data);
@@ -27,12 +30,15 @@
 
 			<!-- email or username -->
 			<label class="flex w-full flex-col gap-1.5">
-				<p class="pl-1.5">Username or email</p>
+				<p class="pl-1.5">Email or username</p>
 				<input
-					bind:value={loginArgs.usernameOrEmail}
-					maxlength="64"
-					required
+					bind:value={loginArgs.emailOrUsername}
 					class="h-12 w-full rounded-lg border border-neutral-300 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+				/>
+				<ErrorMessage
+					class="pl-1.5"
+					message={$query.error?.message}
+					active={$query.error?.message.includes('Email or username')}
 				/>
 			</label>
 
@@ -42,10 +48,12 @@
 				<input
 					bind:value={loginArgs.password}
 					type="password"
-					minlength="7"
-					maxlength="64"
-					required
 					class="h-12 w-full rounded-lg border border-neutral-300 bg-transparent pl-3 outline-none ring-voulr-blue transition-all duration-300 ease-in-out focus:ring-2"
+				/>
+				<ErrorMessage
+					class="pl-1.5"
+					message={$query.error?.message}
+					active={$query.error?.message.includes('Password')}
 				/>
 			</label>
 

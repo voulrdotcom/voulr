@@ -3,7 +3,7 @@ use std::net::SocketAddr;
 use std::sync::Arc;
 use tower_http::cors::{Any, CorsLayer};
 use voulr_core::api::{mount, Ctx};
-use voulr_prisma::prisa::PrismaClient;
+use voulr_prisma::prisma::PrismaClient;
 
 #[tokio::main]
 async fn main() {
@@ -17,13 +17,8 @@ async fn main() {
 
     let app = Router::new()
         .route("/", get(|| async { "voulr server (;" }))
-        .nest("/rspc",
-            router
-                .endpoint(move || Ctx { db: client })
-                .axum(),
-        )
+        .nest("/rspc", router.endpoint(move || Ctx { db: client }).axum())
         .layer(cors);
-
 
     let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
     println!("Listening on {} \n", addr);
