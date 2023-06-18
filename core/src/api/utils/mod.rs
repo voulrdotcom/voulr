@@ -1,7 +1,10 @@
 use rspc::{Error, ErrorCode};
 
-pub fn from_code(code: u16) -> ErrorCode {
-    match code {
+/**
+ * helper function to simplify rspc error messages.
+ */
+pub fn error(code: u16, message: &str) -> Result<(), Error> {
+    let code = match code {
         400 => ErrorCode::BadRequest,
         401 => ErrorCode::Unauthorized,
         403 => ErrorCode::Forbidden,
@@ -14,9 +17,7 @@ pub fn from_code(code: u16) -> ErrorCode {
         499 => ErrorCode::ClientClosedRequest,
         500 => ErrorCode::InternalServerError,
         _ => ErrorCode::BadRequest,
-    }
-}
+    };
 
-pub fn error(code: u16, message: &str) -> Result<(), Error> {
-    Err(Error::new(from_code(code), message.into()))
+    Err(Error::new(code, message.to_string()))
 }

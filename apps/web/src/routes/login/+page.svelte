@@ -58,7 +58,7 @@
 			</label>
 
 			<button
-				on:click={async () => !$query.isError && (await $query.refetch())}
+				on:click={async () => await $query.refetch()}
 				class="h-12 w-full rounded-lg bg-voulr-blue font-medium tracking-wide text-white"
 			>
 				Continue

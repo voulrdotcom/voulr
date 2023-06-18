@@ -15,10 +15,6 @@
 	$: query = createQuery<Promise<null>, Error>(['auth.register'], () =>
 		client.mutation(['auth.register', registerArgs])
 	);
-
-	// logging
-	$: $query.data && console.log('success:', $query.data);
-	$: $query.isError && console.log('fail:', $query.error);
 </script>
 
 <div class="container mx-auto flex max-w-[600px] flex-col gap-6 px-6 py-16 lg:py-20">
@@ -73,7 +69,7 @@
 			</label>
 
 			<button
-				on:click={async () => !$query.isError && (await $query.refetch())}
+				on:click={async () => await $query.refetch()}
 				class="h-12 w-full rounded-lg bg-voulr-blue font-medium tracking-wide text-white"
 			>
 				Create account
