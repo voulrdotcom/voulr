@@ -27,6 +27,6 @@
 	"dependencies": {
 		"@sveltejs/adapter-vercel": "^2.4.3",
 		"dotenv-cli": "^7.2.1",
-		"turbo": "^1.10.2"
+		"turbo": "^1.10.3"
 	}
 }
