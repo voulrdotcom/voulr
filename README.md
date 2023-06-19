@@ -1,9 +1,5 @@
-<a href="#">
-
-</a>
-
 <p align="center">
-    <img width="150" height="150" src="https://github.com/voulr/voulr/blob/main/packages/assets/svgs/voulr-white-logomark.svg" alt="voulr">
+    <img width="150" height="150" style="margin: 30px" src="https://github.com/voulr/voulr/blob/main/packages/assets/svgs/voulr-white-logomark.svg" alt="voulr">
 </p>
 
 <h1 align="center">
