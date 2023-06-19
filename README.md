@@ -18,4 +18,4 @@
 
 ## Credits
 
-- stack and monorepo structure: [spacedrive](https://github.com/spacedriveapp/spacedrive)
+- Stack and monorepo structure: [spacedrive](https://github.com/spacedriveapp/spacedrive)
