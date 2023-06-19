@@ -1,3 +1,7 @@
+<a href="#">
+
+</a>
+
 <p align="center">
     <img width="150" height="150" src="https://github.com/voulr/voulr/blob/main/packages/assets/svgs/voulr-white-logomark.svg" alt="voulr">
 </p>
@@ -8,11 +12,11 @@
 
 <p align="center">
     a call to action builder.
+    <br />
+    <a align="center" href="https://voulr.com">
+        <strong>voulr.com</strong>
+    </a>
 </p>
-
-<a align="center" href="https://voulr.com">
-    <strong>voulr.com</strong>
-</a>
 
 ## Credits
 
