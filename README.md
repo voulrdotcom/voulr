@@ -1,14 +1,18 @@
 <p align="center">
-    <img width="250" height="250" src="https://github.com/voulr/voulr/blob/main/packages/assets/svgs/voulr-white-logomark.svg" alt="voulr">
+    <img width="150" height="150" src="https://github.com/voulr/voulr/blob/main/packages/assets/svgs/voulr-white-logomark.svg" alt="voulr">
 </p>
 
-<h1 align="center"><b>voulr</b></h1>
+<h1 align="center">
+    <b>voulr</b>
+</h1>
 
 <p align="center">
-    A file explorer from the future.
+    a call to action builder.
 </p>
 
-<a href="https://spacedrive.com"><strong>spacedrive.com »</strong></a>
+<a align="center" href="https://voulr.com">
+    <strong>voulr.com</strong>
+</a>
 
 ## Credits
 
