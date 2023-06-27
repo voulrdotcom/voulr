@@ -1,4 +1,6 @@
 use super::{utils::error, Ctx, R};
+use crate::prisma::user;
+use prisma_client_rust::or;
 use regex::Regex;
 use rspc::alpha::AlphaRouter;
 use serde::Deserialize;
@@ -18,23 +20,23 @@ pub fn mount() -> AlphaRouter<Ctx> {
                 let password = args.password.trim();
 
                 match email_or_username {
-                    "" => return error(400, "Email or username is required."),
+                    len if len.len() < 1 => return error(401, "Email or username is required."),
                     len if len.len() < 4 => {
-                        return error(400, "Email or username must be more than 4 characters.")
+                        return error(401, "Email or username must be more than 4 characters.")
                     }
                     len if len.len() > 64 => {
-                        return error(400, "Email or username can't be more than 64 characters.")
+                        return error(401, "Email or username can't be more than 64 characters.")
                     }
                     _ => {}
                 }
 
                 match password {
-                    "" => return error(400, "Password is required."),
+                    len if len.len() < 1 => return error(401, "Password is required."),
                     len if len.len() < 8 => {
-                        return error(400, "Password must be more than 8 characters.")
+                        return error(401, "Password must be more than 8 characters.")
                     }
                     len if len.len() > 32 => {
-                        return error(400, "Password can't be more than 32 characters.")
+                        return error(401, "Password can't be more than 32 characters.")
                     }
                     _ => {}
                 }

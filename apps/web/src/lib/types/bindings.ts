@@ -8,6 +8,6 @@ export type Procedures = {
     subscriptions: never
 };
 
-export type RegisterArgs = { email: string; username: string; password: string }
-
 export type LoginArgs = { emailOrUsername: string; password: string }
+
+export type RegisterArgs = { email: string; username: string; password: string }

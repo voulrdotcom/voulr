@@ -17,7 +17,6 @@ prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-
 rspc = { version = "0.1.4" }
 specta = { version = "1.0.4" }
 tokio = { version = "1.28.2" }
-httpz = { version = "0.0.4" }
 jsonwebtoken = { version = "8.3.0"}
 serde = { version = "1.0.163" } 
 

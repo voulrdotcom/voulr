@@ -8,7 +8,6 @@ edition.workspace = true
 [dependencies]
 prisma-client-rust = { workspace = true }
 rspc = { workspace = true, features = ["alpha"] }
-httpz = { workspace = true, features = ["axum"] }
 specta = { workspace = true }
 jsonwebtoken = { workspace = true }
 serde = { workspace = true, features = ["derive"] }

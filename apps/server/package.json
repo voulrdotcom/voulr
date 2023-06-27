@@ -3,6 +3,10 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "cargo watch -x 'run -p voulr-server'"
+		"deploy": "wrangler publish",
+		"dev": "wrangler dev --local"
+	},
+	"dependencies": {
+		"wrangler": "2.9.0"
 	}
 }
