@@ -1,39 +1,31 @@
-use httpz::{
-    http::{Method, Response, StatusCode},
-    GenericEndpoint, Request,
-};
-use worker::{console_log, event, Date};
+use axum::{routing::get, Router as AxumRouter};
+use axum_cloudflare_adapter::{to_axum_request, to_worker_response, EnvWrapper};
+use tower_service::Service;
+use worker::{event, Env, Request, Response, Result};
 
 mod utils;
 
-#[event(fetch, respond_with_errors)]
-pub async fn main(
-    req: worker::Request,
-    _env: worker::Env,
-    _ctx: worker::Context,
-) -> worker::Result<worker::Response> {
-    console_log!(
-        "{} - [{}], located at: {:?}, within: {}",
-        Date::now().to_string(),
-        req.path(),
-        req.cf().coordinates().unwrap_or_default(),
-        req.cf().region().unwrap_or_else(|| "unknown region".into())
-    );
+#[derive(Clone)]
+pub struct AxumState {
+    pub env_wrapper: EnvWrapper,
+}
 
+#[event(fetch)]
+pub async fn main(req: Request, env: Env, _ctx: worker::Context) -> Result<Response> {
+    utils::log_request(&req);
     utils::set_panic_hook();
 
-    let endpoint = GenericEndpoint::new(
-        "/*any", // TODO: Make this wildcard work
-        [Method::GET, Method::POST],
-        |_req: Request| async move {
-            Ok(Response::builder()
-                .status(StatusCode::OK)
-                .header("Content-Type", "text/html")
-                .body(b"httpz running on Cloudflare Workers!".to_vec())?)
-        },
-    );
+    let axum_state = AxumState {
+        env_wrapper: EnvWrapper::new(env),
+    };
 
-    // TODO: Compatibility with the built in HTTP router
-    // TODO: URL Prefix
-    endpoint.workers(req).await
+    let mut _router: AxumRouter = AxumRouter::new()
+        .route("/", get(|| async { "voulr server (:" }))
+        .with_state(axum_state);
+
+    let axum_request = to_axum_request(req).await.unwrap();
+    let axum_response = _router.call(axum_request).await.unwrap();
+    let response = to_worker_response(axum_response).await.unwrap();
+
+    Ok(response)
 }

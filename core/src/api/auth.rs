@@ -1,6 +1,4 @@
 use super::{utils::error, Ctx, R};
-use crate::prisma::user;
-use prisma_client_rust::or;
 use regex::Regex;
 use rspc::alpha::AlphaRouter;
 use serde::Deserialize;
@@ -15,7 +13,7 @@ pub fn mount() -> AlphaRouter<Ctx> {
                 pub email_or_username: String,
                 pub password: String,
             }
-            R.mutation(|ctx, args: LoginArgs| async move {
+            R.mutation(|_ctx, args: LoginArgs| async move {
                 let email_or_username = args.email_or_username.trim();
                 let password = args.password.trim();
 
@@ -51,7 +49,7 @@ pub fn mount() -> AlphaRouter<Ctx> {
                 pub username: String,
                 pub password: String,
             }
-            R.mutation(|ctx, args: RegisterArgs| async move {
+            R.mutation(|_ctx, args: RegisterArgs| async move {
                 let email = args.email.trim();
                 let username = args.username.trim();
                 let password = args.password.trim();
