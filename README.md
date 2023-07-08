@@ -16,6 +16,12 @@
     </a>
 </p>
 
+voulr is a call to action builder written in rust.
+<br/>
+<br/>
+
+> NOTE: This is currently on a pause, as I'm working on [Chatmover](https://github.com/chatmover/chatmover).
+
 ## Credits
 
 - Stack and monorepo structure: [spacedrive](https://github.com/spacedriveapp/spacedrive)
